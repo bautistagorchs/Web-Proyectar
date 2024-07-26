@@ -1,7 +1,5 @@
+import Landing from "@/componentes/landing/Landing";
+
 export default function Home() {
-  return (
-    <main>
-      <h1>Hey there, starting the proyectar web page</h1>
-    </main>
-  );
+  return <Landing />;
 }

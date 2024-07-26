@@ -6,7 +6,7 @@
 
 html,
 body {
-  max-width: 100vw;
+  width: 100%;
 }
 
 a {
@@ -14,9 +14,9 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
 /* Enable hover only on non-touch devices */

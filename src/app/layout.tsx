@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { open_sans } from "@/fuentes/fuentes";
+import { poppins } from "@/fuentes/fuentes";
 import "./globals.css";
+import Navbar from "@/componentes/navbar/Navbar";
+import Footer from "@/componentes/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Proyectar ONG",
@@ -14,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={open_sans.className}>{children}</body>
+      <body className={poppins.className}>
+        <Navbar />
+        {children}
+        {/* <Footer /> */}
+      </body>
     </html>
   );
 }
