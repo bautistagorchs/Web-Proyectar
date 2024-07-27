@@ -1,12 +1,9 @@
 import React from "react";
 import s from "./landing.module.scss";
-// import Image from "next/image";
-// import img from "@/archivos/istockphoto-1337515615-2048x2048.jpg";
 
 export default function Landing() {
   return (
     <main className={s.main}>
-      {/* <Image src={img} alt="hsd" className={s.video} /> */}
       <video autoPlay loop muted className={s.video}>
         <source
           src={
