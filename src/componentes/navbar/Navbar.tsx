@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
           <div>
             <Link href="">
-              Colabora <BiDonateHeart size={21} />
+              Impulsá <BiDonateHeart size={21} />
             </Link>
           </div>
           <div className={s.expandir}>
