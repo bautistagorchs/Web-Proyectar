@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import s from "./navbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/archivos/logo_negativo.png";
+import logo from "@/archivos/logo_blanco_fondo_transparente.png";
 import { Spin as Hamburger } from "hamburger-react";
 import { GrLineChart } from "react-icons/gr";
 import { TbWaveSawTool } from "react-icons/tb";
@@ -13,8 +13,8 @@ import { BiDonateHeart } from "react-icons/bi";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { GoArrowRight } from "react-icons/go";
 
-import CCR from "@/archivos/foto_ccr_2.png";
-import reciclaje from "@/archivos/reciclaje.png";
+import CCR from "@/archivos/foto_ccr_blended.png";
+import reciclaje from "@/archivos/proyecto_reciclaje.png";
 
 const Navbar = () => {
   const [opcion, _setOpcion] = useState(1);
