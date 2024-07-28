@@ -37,7 +37,7 @@ const Navbar = () => {
           </div>
           <div className={s.expandir}>
             <Hamburger
-              color="#222222bb"
+              color="white"
               rounded
               distance="sm"
               size={25}

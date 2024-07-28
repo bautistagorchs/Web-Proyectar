@@ -51,7 +51,7 @@ $margen-elementos-navbar: 8%;
   margin-right: $margen-elementos-navbar;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
   background-color: rgba(58, 58, 58, 0.425);
   border-radius: 3px;
   div {
@@ -62,9 +62,9 @@ $margen-elementos-navbar: 8%;
     transition: all 0.7s ease;
     background-color: transparent;
     &:hover {
-      background-color: $fondo-menu-flotante-transparente;
+      // background-color: rgba(58, 58, 58, 0.596);
       a {
-        border-bottom: 1px solid $underline-gris-navbar;
+        border-bottom: 1px solid white;
       }
     }
   }

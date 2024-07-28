@@ -52,13 +52,13 @@
       padding: 0 12px;
       margin-top: 15%;
       text-transform: uppercase;
-      color: $celeste-claro-azulado;
+      color: white;
       font-size: 50px;
       letter-spacing: 2px;
       opacity: 0;
       transition: all 0.5s ease-in;
-      background-color: white;
-      border-radius: 1px;
+      background-color: $celeste-claro-azulado;
+      border-radius: 1.5px;
     }
   }
   hr {
