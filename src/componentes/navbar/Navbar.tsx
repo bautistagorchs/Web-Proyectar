@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import s from "./navbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/archivos/logo_blanco_fondo_transparente.png";
+import logo from "@/archivos/logo_gris_fondo_transparente.png";
 import { Spin as Hamburger } from "hamburger-react";
 import { GrLineChart } from "react-icons/gr";
 import { TbWaveSawTool } from "react-icons/tb";
