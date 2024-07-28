@@ -1,13 +1,13 @@
 import React from "react";
 import s from "./landing.module.scss";
-// import Image from "next/image";
-// import img from "@/archivos/istockphoto-1337515615-2048x2048.jpg";
+import Image from "next/image";
+import img from "@/archivos/niño_parado_espaldas.jpg";
 
 export default function Landing() {
   return (
     <main className={s.main}>
-      {/* <Image src={img} alt="hsd" className={s.video} /> */}
-      <video autoPlay loop muted className={s.video}>
+      <Image src={img} alt="hsd" className={s.video} />
+      {/* <video autoPlay loop muted className={s.video}>
         <source
           src={
             "https://videos.pexels.com/video-files/6753733/6753733-uhd_2560_1440_30fps.mp4"
@@ -17,10 +17,11 @@ export default function Landing() {
           type="video/mp4"
         />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
       <div className={s.mainContent}>
         <div className={s.left}>
           <h1>¿Que planeta le dejamos a nuestros hijos?</h1>
+          {/* <h3>- Desarrollo ambiental -</h3> */}
           <h3>Desarrollo ambiental</h3>
         </div>
         <hr />
@@ -29,6 +30,7 @@ export default function Landing() {
             ¿Que hijos le dejamos a <br />
             nuestro planeta?
           </h1>
+          {/* <h3>- Capital social -</h3> */}
           <h3>Capital social</h3>
         </div>
       </div>
