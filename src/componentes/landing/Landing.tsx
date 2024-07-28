@@ -39,6 +39,6 @@ export default function Landing() {
       </div>
     </main>
   ) : (
-    ""
+    <Image src={img} alt="hsd" className={s.video} />
   );
 }
