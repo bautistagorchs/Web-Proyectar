@@ -1,10 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import s from "./landing.module.scss";
 import Image from "next/image";
 import img from "@/archivos/niño_parado_espaldas.jpg";
 
 export default function Landing() {
-  return (
+  const [first, _setfirst] = useState(false);
+  return first ? (
     <main className={s.main}>
       <Image src={img} alt="hsd" className={s.video} />
       {/* <video autoPlay loop muted className={s.video}>
@@ -35,5 +38,7 @@ export default function Landing() {
         </div>
       </div>
     </main>
+  ) : (
+    ""
   );
 }
