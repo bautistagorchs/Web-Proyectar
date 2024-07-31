@@ -6,13 +6,13 @@ $margen-elementos-navbar: 8%;
 
 .barraNavegacionTop {
   width: 100%;
-  height: $altura-navbar;
+  height: $altura-top-navbar;
   position: relative;
   position: fixed;
   display: flex;
   justify-content: center;
   color: white;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 3px 3px;
   z-index: 10;
   transition: all 0.3s ease;
 
@@ -30,11 +30,11 @@ $margen-elementos-navbar: 8%;
     hr {
       width: 90%;
       position: absolute;
-      top: calc($altura-navbar + 10px);
+      top: calc($altura-top-navbar + 10px);
     }
     .contenidoExpandible {
       width: 80%;
-      margin-top: calc($altura-navbar + 10px);
+      margin-top: calc($altura-top-navbar + 10px);
       display: flex;
       flex-direction: column;
     }
@@ -110,6 +110,7 @@ $margen-elementos-navbar: 8%;
 
   .contenidoBarra {
     width: 85%;
+    margin-bottom: 1.5vh;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -356,9 +357,21 @@ $margen-elementos-navbar: 8%;
     }
   }
 }
+.barraNavegacionTop.navbarScrolled {
+  height: 10vh;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .contenidoBarra {
+    margin-top: 15px;
+    align-items: center;
+  }
+  .contenidoBarra .logo {
+    min-width: 145px;
+  }
+}
 .barraNavegacionBottom {
   width: 100%;
-  height: 10vh;
+  height: $altura-bottom-navbar;
   position: relative;
   position: fixed;
   bottom: 0;
@@ -385,7 +398,7 @@ $margen-elementos-navbar: 8%;
   }
 
   .barraNavegacionTop {
-    height: $altura-navbar;
+    height: $altura-top-navbar;
     display: flex;
     color: white;
     border-radius: 0 0 5px 5px;

@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./navbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/archivos/logo_gris_fondo_transparente.png";
+import logo_apaisado from "@/archivos/logo_apaisadp_gris_fondo_transparente.png";
 import { Spin as Hamburger } from "hamburger-react";
 import { TbWaveSawTool } from "react-icons/tb";
 import { AiOutlineTeam } from "react-icons/ai";
@@ -31,12 +32,27 @@ const Navbar = () => {
       nosotros: seccion === "nosotros" ? !prevState.nosotros : false,
     }));
   };
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      const scroll = window.scrollY;
+      setScrollY(scroll);
+    });
+  }, []);
   return (
     <>
-      <nav className={s.barraNavegacionTop}>
+      <nav
+        className={`${s.barraNavegacionTop} ${
+          scrollY > 10 ? s.navbarScrolled : ""
+        }`}
+      >
         <div className={s.contenidoBarra}>
           <div className={s.logo}>
-            <Image src={logo} alt="Logo a color" />
+            {scrollY > 10 ? (
+              <Image src={logo_apaisado} alt="Logo a color" />
+            ) : (
+              <Image src={logo} alt="Logo a color" />
+            )}
           </div>
           <div className={s.elementosNavegacion}>
             <div className={s.proyectos}>
