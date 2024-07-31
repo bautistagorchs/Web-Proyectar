@@ -4,266 +4,635 @@ $altura-divFlotante: 30vh;
 $ancho-divFlotante: calc(100% - 8% * 2);
 $margen-elementos-navbar: 8%;
 
-.barraNavegacion {
+.barraNavegacionTop {
   width: 100%;
   height: $altura-navbar;
   position: relative;
   position: fixed;
   display: flex;
+  justify-content: center;
   color: white;
-  // backdrop-filter: blur(10px);
-  // background-color: rgba(58, 58, 58, 0.425);
   border-radius: 0 0 5px 5px;
   z-index: 10;
   transition: all 0.3s ease;
-  // &:hover {
-  //   backdrop-filter: blur(15px);
-  //   background-color: rgba(58, 58, 58, 0.514);
-  // }
-}
 
-/* OPCION 2*/
-.contenidoBarra {
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo {
-  max-width: 10%;
-  // margin-left: $margen-elementos-navbar;
-  margin-bottom: 8px;
-  // filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-  img {
-    height: 100%;
+  .expandible {
     width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: auto;
-    object-fit: cover;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-}
-.elementosNavegacion {
-  width: 30%;
-  margin-bottom: 35px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(58, 58, 58, 0.425);
-  > div {
-    height: 47px;
-    display: flex;
-    align-items: center;
-    transition: all 0.4s ease;
-    border-radius: 2px 2px 0 0;
-    background-color: transparent;
-    &:hover {
-      background-color: rgba(58, 58, 58, 0.616);
-    }
-  }
-  .expandir {
-    &:hover {
-      background-color: inherit;
-    }
-  }
-  > div > a {
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    font-size: $tamaño-fuente-navbar;
-    font-weight: 500;
-    border-bottom: 1px solid transparent;
-    transition: all 0.7s ease;
-    &:hover {
-      border-bottom: 1px solid white;
-    }
-  }
-  a svg {
-    margin-left: 5px;
-  }
-}
-
-.elementosNavegacion .proyectos {
-  &:hover {
-    .flotanteProyectos {
-      display: flex;
-    }
-  }
-}
-.elementosNavegacion .proyectos .flotanteProyectos {
-  display: none;
-  position: absolute;
-  top: 5.3vh;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
-  background-color: rgba(58, 58, 58, 0.514);
-}
-.flotanteProyectos .contenedorImagen {
-  width: 45vh;
-  max-width: 45vh;
-  height: 25vh;
-  display: flex;
-  justify-content: center;
-  margin: 15px 15px 15px 10px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 5px;
-  border: 1px solid black;
-  img {
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: auto;
-    object-fit: cover;
-    transition: all 0.2s ease-in;
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.08);
-    }
-  }
-  button {
-    width: 90%;
     position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
-    justify-content: center;
-    bottom: 10px;
-    padding: 12px 0;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.884);
-    border-radius: 25px;
-    border: none;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-    p {
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    hr {
       width: 90%;
-      font-size: 17px;
+      position: absolute;
+      top: calc($altura-navbar + 10px);
+    }
+    .contenidoExpandible {
+      width: 80%;
+      margin-top: calc($altura-navbar + 10px);
+      display: flex;
+      flex-direction: column;
+    }
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      > li {
+        padding: 0.9rem 0;
+      }
+    }
+
+    .menuButton {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid transparent;
+      background: none;
+      border: none;
+      color: #444444;
+      font-size: 1rem;
+      transition: background 0.3s ease;
     }
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.05);
-      p {
-        text-decoration: underline;
-      }
-    }
-  }
-}
 
-.flotanteProyectos .listaProyectos {
-  width: 30ch;
-  margin-top: 12px;
-  margin-left: 12px;
-  ul {
-    list-style: none;
-    line-height: 2rem;
-  }
-  hr {
-    width: 90%;
-  }
-  a {
-    border-bottom: transparent;
-    transition: all 0.5s ease;
-    font-weight: 400;
-    font-size: 16.5px;
-    &:hover {
-      border-bottom: 1px solid white;
+    .menuButton:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
-  }
-  .todosLosProyectos {
-    transition: all 0.3s ease;
-    &:hover {
-      transform: scale(1.02) translateX(2px) translateY(-1px);
+
+    .submenu {
+      display: none;
+      width: 90%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-left: 10%;
+      border-radius: 5px;
     }
-    a {
+
+    .submenu li {
+      padding: 0.5rem 0;
+    }
+
+    .submenu a {
       display: flex;
       align-items: center;
-      margin-left: 12px;
-      text-decoration: underline;
-      transition: all 0.5s ease;
-      &:hover {
-        border-bottom: 1px solid transparent;
-        span {
-          display: flex;
-        }
-      }
-      span {
-        display: none;
-        align-items: center;
-        transition: all 0.3s ease-in;
-        &:hover {
-          transform: translateX(25px);
-        }
+      color: #444444;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      svg {
+        margin-left: 10px;
       }
     }
-  }
-}
-.flotanteProyectos .contenedorImagen:hover img,
-.flotanteProyectos .contenedorImagen button:hover ~ img {
-  transform: scale(1.08);
-}
 
-.elementosNavegacion .nosotros {
-  position: relative;
-  &:hover {
-    .flotanteNosotros {
-      display: flex;
+    .submenu a:hover {
+      color: black;
+    }
+    .menu .liButton {
+      padding-bottom: 1.5rem;
+      button {
+        padding: 10px 30px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        background-color: orange;
+        border-radius: 5px;
+        border: none;
+      }
     }
   }
-}
-.elementosNavegacion .nosotros .flotanteNosotros {
-  display: none;
-  $width: 25vh;
-  width: $width;
-  position: absolute;
-  top: 5.3vh;
-  left: 50%;
-  transform: translateX(-50%);
-  flex-direction: column;
-  border-radius: 5px;
-  background-color: rgba(58, 58, 58, 0.623);
-  box-shadow: 0px 0px 10px -1px rgb(0 0 0 / 16%);
-  ul {
-    list-style: none;
-    line-height: 3rem;
+  .expandible.show {
+    transform: translateX(0%);
   }
-  li {
-    position: relative;
-    transition: 0.5s all ease;
-    background-color: transparent;
+
+  .contenidoBarra {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .logo {
+    z-index: 20;
+    min-width: 120px;
+    max-width: 8%;
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      object-fit: cover;
+    }
     &:hover {
       cursor: pointer;
-      background-color: rgba(58, 58, 58, 0.596);
-      > a > svg {
-        color: inherit;
+    }
+  }
+  .elementosNavegacion {
+    // width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    // backdrop-filter: blur(10px);
+    // background-color: rgba(58, 58, 58, 0.425);
+    > div {
+      height: 47px;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s ease;
+      border-radius: 2px 2px 0 0;
+      background-color: transparent;
+      &:hover {
+        background-color: rgba(58, 58, 58, 0.616);
+      }
+    }
+    .expandir {
+      z-index: 20;
+      &:hover {
+        background-color: inherit;
+      }
+    }
+    > div > a {
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      font-size: $tamaño-fuente-navbar;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: all 0.7s ease;
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+    a svg {
+      margin-left: 5px;
+    }
+  }
+  .elementosNavegacion .proyectos,
+  .elementosNavegacion .nosotros,
+  .elementosNavegacion .colabora {
+    display: none;
+  }
+
+  .elementosNavegacion .proyectos {
+    &:hover {
+      .flotanteProyectos {
+        display: flex;
       }
     }
   }
-  a {
-    margin-left: 17px;
-    font-size: 16.5px;
-    font-weight: 500;
-    > svg {
+  .elementosNavegacion .proyectos .flotanteProyectos {
+    display: none;
+    position: absolute;
+    top: 5.3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: rgba(58, 58, 58, 0.514);
+  }
+  .flotanteProyectos .contenedorImagen {
+    width: 45vh;
+    max-width: 45vh;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    margin: 15px 15px 15px 10px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid black;
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      object-fit: cover;
+      transition: all 0.2s ease-in;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.08);
+      }
+    }
+    button {
+      width: 90%;
       position: absolute;
-      right: 5px;
-      top: calc(50% - 16px / 2);
-      transition: 1s all ease;
-      color: transparent;
+      display: flex;
+      justify-content: center;
+      bottom: 10px;
+      padding: 12px 0;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.884);
+      border-radius: 25px;
+      border: none;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      p {
+        width: 90%;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid transparent;
+      }
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        p {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .flotanteProyectos .listaProyectos {
+    width: 30ch;
+    margin-top: 12px;
+    margin-left: 12px;
+    ul {
+      list-style: none;
+      line-height: 2rem;
+    }
+    hr {
+      width: 90%;
+    }
+    a {
+      border-bottom: transparent;
+      transition: all 0.5s ease;
+      font-weight: 400;
+      font-size: 16.5px;
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+    .todosLosProyectos {
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.02) translateX(2px) translateY(-1px);
+      }
+      a {
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        text-decoration: underline;
+        transition: all 0.5s ease;
+        &:hover {
+          border-bottom: 1px solid transparent;
+          span {
+            display: flex;
+          }
+        }
+        span {
+          display: none;
+          align-items: center;
+          transition: all 0.3s ease-in;
+          &:hover {
+            transform: translateX(25px);
+          }
+        }
+      }
+    }
+  }
+  .flotanteProyectos .contenedorImagen:hover img,
+  .flotanteProyectos .contenedorImagen button:hover ~ img {
+    transform: scale(1.08);
+  }
+
+  .elementosNavegacion .nosotros {
+    position: relative;
+    &:hover {
+      .flotanteNosotros {
+        display: flex;
+      }
+    }
+  }
+  .elementosNavegacion .nosotros .flotanteNosotros {
+    display: none;
+    $width: 25vh;
+    width: $width;
+    position: absolute;
+    top: 5.3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgba(58, 58, 58, 0.623);
+    box-shadow: 0px 0px 10px -1px rgb(0 0 0 / 16%);
+    ul {
+      list-style: none;
+      line-height: 3rem;
+    }
+    li {
+      position: relative;
+      transition: 0.5s all ease;
+      background-color: transparent;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(58, 58, 58, 0.596);
+        > a > svg {
+          color: inherit;
+        }
+      }
+    }
+    a {
+      margin-left: 17px;
+      font-size: 16.5px;
+      font-weight: 500;
+      > svg {
+        position: absolute;
+        right: 5px;
+        top: calc(50% - 16px / 2);
+        transition: 1s all ease;
+        color: transparent;
+      }
+    }
+  }
+}
+.barraNavegacionBottom {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.226);
+  z-index: 10;
+}
+.barraNavegacionBottom .elementosNavegacion {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 800px) {
+  .barraNavegacionBottom {
+    display: none;
+  }
+
+  .barraNavegacionTop {
+    height: $altura-navbar;
+    display: flex;
+    color: white;
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+
+  .contenidoBarra {
+    width: 90%;
+    // margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    max-width: 8%;
+    margin-bottom: 8px;
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      object-fit: cover;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .elementosNavegacion {
+    width: 30%;
+    margin-bottom: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(58, 58, 58, 0.425);
+    > div {
+      height: 47px;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s ease;
+      border-radius: 2px 2px 0 0;
+      background-color: transparent;
+      &:hover {
+        background-color: rgba(58, 58, 58, 0.616);
+      }
+    }
+    .expandir {
+      &:hover {
+        background-color: inherit;
+      }
+    }
+    > div > a {
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      font-size: $tamaño-fuente-navbar;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: all 0.7s ease;
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+    a svg {
+      margin-left: 5px;
+    }
+  }
+
+  .elementosNavegacion .proyectos {
+    &:hover {
+      .flotanteProyectos {
+        display: flex;
+      }
+    }
+  }
+  .elementosNavegacion .proyectos .flotanteProyectos {
+    display: none;
+    position: absolute;
+    top: 5.3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: rgba(58, 58, 58, 0.514);
+  }
+  .flotanteProyectos .contenedorImagen {
+    width: 45vh;
+    max-width: 45vh;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    margin: 15px 15px 15px 10px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid black;
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      object-fit: cover;
+      transition: all 0.2s ease-in;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.08);
+      }
+    }
+    button {
+      width: 90%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      bottom: 10px;
+      padding: 12px 0;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.884);
+      border-radius: 25px;
+      border: none;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      p {
+        width: 90%;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid transparent;
+      }
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        p {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .flotanteProyectos .listaProyectos {
+    width: 30ch;
+    margin-top: 12px;
+    margin-left: 12px;
+    ul {
+      list-style: none;
+      line-height: 2rem;
+    }
+    hr {
+      width: 90%;
+    }
+    a {
+      border-bottom: transparent;
+      transition: all 0.5s ease;
+      font-weight: 400;
+      font-size: 16.5px;
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+    .todosLosProyectos {
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.02) translateX(2px) translateY(-1px);
+      }
+      a {
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        text-decoration: underline;
+        transition: all 0.5s ease;
+        &:hover {
+          border-bottom: 1px solid transparent;
+          span {
+            display: flex;
+          }
+        }
+        span {
+          display: none;
+          align-items: center;
+          transition: all 0.3s ease-in;
+          &:hover {
+            transform: translateX(25px);
+          }
+        }
+      }
+    }
+  }
+  .flotanteProyectos .contenedorImagen:hover img,
+  .flotanteProyectos .contenedorImagen button:hover ~ img {
+    transform: scale(1.08);
+  }
+
+  .elementosNavegacion .nosotros {
+    position: relative;
+    &:hover {
+      .flotanteNosotros {
+        display: flex;
+      }
+    }
+  }
+  .elementosNavegacion .nosotros .flotanteNosotros {
+    display: none;
+    $width: 25vh;
+    width: $width;
+    position: absolute;
+    top: 5.3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgba(58, 58, 58, 0.623);
+    box-shadow: 0px 0px 10px -1px rgb(0 0 0 / 16%);
+    ul {
+      list-style: none;
+      line-height: 3rem;
+    }
+    li {
+      position: relative;
+      transition: 0.5s all ease;
+      background-color: transparent;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(58, 58, 58, 0.596);
+        > a > svg {
+          color: inherit;
+        }
+      }
+    }
+    a {
+      margin-left: 17px;
+      font-size: 16.5px;
+      font-weight: 500;
+      > svg {
+        position: absolute;
+        right: 5px;
+        top: calc(50% - 16px / 2);
+        transition: 1s all ease;
+        color: transparent;
+      }
     }
   }
 }
