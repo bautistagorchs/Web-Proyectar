@@ -108,13 +108,12 @@ const Navbar = () => {
             </div>
             <div>
               <Link href="">
-                Hace un cambio <BiDonateHeart size={21} />
+                Hacé un cambio <BiDonateHeart size={21} />
               </Link>
             </div>
             <div className={s.expandir}>
               <Hamburger
                 color="white"
-                // color="#222222bb"
                 rounded
                 distance="sm"
                 size={25}
