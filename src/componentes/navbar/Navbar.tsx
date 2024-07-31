@@ -99,10 +99,29 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div className={s.donar}>
             <Link href="">
               Hacé un cambio <BiDonateHeart size={21} />
             </Link>
+            <div className={s.flotanteDonar}>
+              <ul>
+                <li>
+                  <Link href={""}>
+                    Dona tu tiempo <RiArrowRightSLine />{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={""}>
+                    Aportá economicamente <RiArrowRightSLine />
+                  </Link>
+                </li>
+                <li>
+                  <Link href={""}>
+                    Ver más? <RiArrowRightSLine />
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className={s.expandir}>
             <Hamburger

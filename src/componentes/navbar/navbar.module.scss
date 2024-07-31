@@ -213,17 +213,20 @@ $top-flotantes: 5vh;
   transform: scale(1.08);
 }
 
-.elementosNavegacion .nosotros {
+.elementosNavegacion .nosotros,
+.elementosNavegacion .donar {
   position: relative;
   &:hover {
-    .flotanteNosotros {
+    .flotanteNosotros,
+    .flotanteDonar {
       display: flex;
     }
   }
 }
-.elementosNavegacion .nosotros .flotanteNosotros {
+.elementosNavegacion .nosotros .flotanteNosotros,
+.elementosNavegacion .donar .flotanteDonar {
   display: none;
-  $width: 25vh;
+  $width: 30vh;
   width: $width;
   position: absolute;
   top: $top-flotantes;
