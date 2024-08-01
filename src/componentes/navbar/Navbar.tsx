@@ -20,11 +20,12 @@ import CCR from "@/archivos/foto_ccr_blended.png";
 import reciclaje from "@/archivos/proyecto_reciclaje.png";
 
 const Navbar = () => {
-  const [isOpen, setOpen] = useState(false);
   const initialState = {
     proyectos: false,
     nosotros: false,
   };
+  const [isOpen, setOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const [seccionActiva, setseccionActiva] = useState(initialState);
   const handleMenuClick = (seccion: string) => {
     setseccionActiva((prevState) => ({
@@ -32,10 +33,11 @@ const Navbar = () => {
       nosotros: seccion === "nosotros" ? !prevState.nosotros : false,
     }));
   };
-  const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
+    let scroll = window.scrollY;
+    setScrollY(scroll);
     window.addEventListener("scroll", function () {
-      const scroll = window.scrollY;
+      scroll = window.scrollY;
       setScrollY(scroll);
     });
   }, []);
