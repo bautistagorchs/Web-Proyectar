@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import s from "./navbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/archivos/logo_blanco_fondo_transparente.png";
+// import logo from "@/archivos/logo_blanco_fondo_transparente.png";
+import logo from "@/archivos/logo_gris_fondo_transparente.png";
 import { Spin as Hamburger } from "hamburger-react";
 import { TbWaveSawTool } from "react-icons/tb";
 import { AiOutlineTeam } from "react-icons/ai";
@@ -106,10 +107,10 @@ const Navbar = () => {
           </div>
           <div className={s.expandir}>
             <Hamburger
-              color="white"
+              color="rgba(34, 34, 34, 0.849)"
               rounded
               distance="sm"
-              size={25}
+              size={27}
               toggled={isOpen}
               toggle={setOpen}
               label="Ver más"
