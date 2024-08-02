@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { poppins } from "@/fuentes/fuentes";
+import { roboto } from "@/fuentes/fuentes";
 import "./globals.css";
 import Navbar from "@/componentes/navbar/Navbar";
 import Footer from "@/componentes/footer/Footer";
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={roboto.className}>
         <Navbar />
         {children}
         {/* <Footer /> */}
