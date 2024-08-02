@@ -368,6 +368,12 @@ $margen-elementos-navbar: 8%;
   .contenidoBarra .logo {
     min-width: 145px;
   }
+  hr {
+    top: calc($altura-top-navbar-scrolled + 10px);
+  }
+  .contenidoExpandible {
+    margin-top: calc($altura-top-navbar-scrolled + 10px);
+  }
 }
 .barraNavegacionBottom {
   width: 100%;

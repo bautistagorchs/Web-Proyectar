@@ -111,10 +111,8 @@ section.acercaDe {
     align-items: center;
     gap: 2rem;
     h1 {
-      // color: #e92067;
       color: yellow;
       font-size: 28px;
-      // text-decoration: underline;
       -webkit-text-stroke-width: 0.5px;
       -webkit-text-stroke-color: rgb(180, 180, 0);
     }
@@ -176,8 +174,79 @@ section.acercaDe {
   }
 }
 section.proyectos {
-  height: calc(100vh - $altura-top-navbar-scrolled);
-  background: linear-gradient(#07516e, #021255);
+  // height: calc(100vh - $altura-top-navbar-scrolled);
+  background: linear-gradient(#07516e, #020c36);
+  padding-bottom: 15vh;
+  .contenidoProyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    h1 {
+      margin-top: 10%;
+      color: white;
+      font-size: 25px;
+      text-align: center;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: rgba(0, 140, 255, 0.74);
+    }
+  }
+  .contenidoProyectos .card {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 15px 15px 30px -11px #bebebe3f, -15px -15px 30px -11px #ffffff3b;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 15px 15px 30px -11px #bebebed8,
+        -15px -15px 30px -11px #ffffff88;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      object-fit: cover;
+      border-radius: 8px 8px 2px 2px;
+    }
+    h3 {
+      margin-top: 1rem;
+      font-size: 16px;
+      color: #021255;
+      text-align: center;
+    }
+    p {
+      width: 80%;
+      margin-top: 1.5rem;
+      padding-bottom: 2rem;
+      color: $girs-oscuro;
+      text-align: center;
+      font-size: 14px;
+    }
+    button {
+      margin-bottom: 2rem;
+      outline: none;
+      padding: 10px 20px;
+      color: #021255;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      border-radius: 12px;
+      border: 1px solid #07516e;
+      &:active,
+      &:focus {
+        color: white;
+        background-color: #021255;
+        box-shadow: 0px 5px 9px 1px #000000a8;
+      }
+    }
+  }
 }
 
 @media (min-width: 800px) {
