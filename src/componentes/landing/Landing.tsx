@@ -23,7 +23,6 @@ export default function Landing() {
           <h1>¿Que planeta le dejamos a nuestros hijos?</h1>
           <h3>Desarrollo ambiental</h3>
         </div>
-        <hr />
         <div className={s.right}>
           <h1>
             ¿Que hijos le dejamos a <br />
