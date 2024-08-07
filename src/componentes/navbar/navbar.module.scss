@@ -134,15 +134,12 @@ $margen-elementos-navbar: 8%;
     }
   }
   .elementosNavegacion {
-    // width: 30%;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    // backdrop-filter: blur(10px);
-    // background-color: rgba(58, 58, 58, 0.425);
     > div {
       height: 47px;
       display: flex;
@@ -398,260 +395,366 @@ $margen-elementos-navbar: 8%;
     align-items: center;
   }
 }
-@media (min-width: 800px) {
+
+@media (min-width: 1000px) {
+  $altura-top-navbar: 18vh;
+  .barraNavegacionTop {
+    height: $altura-top-navbar;
+    backdrop-filter: blur(7px);
+    background-color: rgba(58, 58, 58, 0.37);
+    border-radius: 0 0 5px 5px;
+    &:hover {
+      backdrop-filter: blur(15px);
+      background-color: rgba(58, 58, 58, 0.514);
+    }
+    .contenidoBarra {
+      width: 100%;
+      margin-top: 17px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      max-width: 9%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .elementosNavegacion {
+      .proyectos,
+      .nosotros,
+      .colabora {
+        display: flex;
+      }
+      color: $gris-del-logo;
+      > div {
+        padding: 3px 10px 15px 10px;
+        display: flex;
+        align-items: center;
+        transition: all 0.4s ease;
+        border-radius: 2px 2px 0 0;
+        background-color: transparent;
+        &:hover {
+          background-color: rgba(58, 58, 58, 0.616);
+          > a {
+            border-bottom: 1px solid $gris-del-logo;
+          }
+        }
+      }
+    }
+  }
   .barraNavegacionBottom {
     display: none;
   }
-
-  .barraNavegacionTop {
-    height: $altura-top-navbar;
-    display: flex;
-    color: white;
-    border-radius: 0 0 5px 5px;
-    z-index: 10;
-    transition: all 0.3s ease;
-  }
-
-  .contenidoBarra {
-    width: 90%;
-    // margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    max-width: 8%;
-    margin-bottom: 8px;
-    img {
-      height: 100%;
-      width: 100%;
-      max-width: 100%;
-      max-height: 100%;
-      display: block;
-      margin: auto;
-      object-fit: cover;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  .elementosNavegacion {
-    width: 30%;
-    margin-bottom: 35px;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
-    background-color: rgba(58, 58, 58, 0.425);
-    > div {
-      height: 47px;
-      display: flex;
-      align-items: center;
-      transition: all 0.4s ease;
-      border-radius: 2px 2px 0 0;
-      background-color: transparent;
-      &:hover {
-        background-color: rgba(58, 58, 58, 0.616);
-      }
-    }
-    .expandir {
-      &:hover {
-        background-color: inherit;
-      }
-    }
-    > div > a {
-      padding: 0 10px;
-      display: flex;
-      align-items: center;
-      font-size: $tamaño-fuente-navbar;
-      font-weight: 500;
-      border-bottom: 1px solid transparent;
-      transition: all 0.7s ease;
-      &:hover {
-        border-bottom: 1px solid white;
-      }
-    }
-    a svg {
-      margin-left: 5px;
-    }
-  }
-
-  .elementosNavegacion .proyectos {
-    &:hover {
-      .flotanteProyectos {
-        display: flex;
-      }
-    }
-  }
-  .elementosNavegacion .proyectos .flotanteProyectos {
-    display: none;
-    position: absolute;
-    top: 5.3vh;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 5px;
-    background-color: rgba(58, 58, 58, 0.514);
-  }
-  .flotanteProyectos .contenedorImagen {
-    width: 45vh;
-    max-width: 45vh;
-    height: 25vh;
-    display: flex;
-    justify-content: center;
-    margin: 15px 15px 15px 10px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 5px;
-    border: 1px solid black;
-    img {
-      height: 100%;
-      width: 100%;
-      max-width: 100%;
-      max-height: 100%;
-      display: block;
-      margin: auto;
-      object-fit: cover;
-      transition: all 0.2s ease-in;
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.08);
-      }
-    }
-    button {
-      width: 90%;
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      bottom: 10px;
-      padding: 12px 0;
-      outline: none;
-      background-color: rgba(255, 255, 255, 0.884);
-      border-radius: 25px;
-      border: none;
-      border: 1px solid transparent;
-      transition: all 0.3s ease;
-      p {
-        width: 90%;
-        font-size: 17px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid transparent;
-      }
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-        p {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  .flotanteProyectos .listaProyectos {
-    width: 30ch;
-    margin-top: 12px;
-    margin-left: 12px;
-    ul {
-      list-style: none;
-      line-height: 2rem;
-    }
-    hr {
-      width: 90%;
-    }
-    a {
-      border-bottom: transparent;
-      transition: all 0.5s ease;
-      font-weight: 400;
-      font-size: 16.5px;
-      &:hover {
-        border-bottom: 1px solid white;
-      }
-    }
-    .todosLosProyectos {
-      transition: all 0.3s ease;
-      &:hover {
-        transform: scale(1.02) translateX(2px) translateY(-1px);
-      }
-      a {
-        display: flex;
-        align-items: center;
-        margin-left: 12px;
-        text-decoration: underline;
-        transition: all 0.5s ease;
-        &:hover {
-          border-bottom: 1px solid transparent;
-          span {
-            display: flex;
-          }
-        }
-        span {
-          display: none;
-          align-items: center;
-          transition: all 0.3s ease-in;
-          &:hover {
-            transform: translateX(25px);
-          }
-        }
-      }
-    }
-  }
-  .flotanteProyectos .contenedorImagen:hover img,
-  .flotanteProyectos .contenedorImagen button:hover ~ img {
-    transform: scale(1.08);
-  }
-
-  .elementosNavegacion .nosotros {
-    position: relative;
-    &:hover {
-      .flotanteNosotros {
-        display: flex;
-      }
-    }
-  }
-  .elementosNavegacion .nosotros .flotanteNosotros {
-    display: none;
-    $width: 25vh;
-    width: $width;
-    position: absolute;
-    top: 5.3vh;
-    left: 50%;
-    transform: translateX(-50%);
-    flex-direction: column;
-    border-radius: 5px;
-    background-color: rgba(58, 58, 58, 0.623);
-    box-shadow: 0px 0px 10px -1px rgb(0 0 0 / 16%);
-    ul {
-      list-style: none;
-      line-height: 3rem;
-    }
-    li {
-      position: relative;
-      transition: 0.5s all ease;
-      background-color: transparent;
-      &:hover {
-        cursor: pointer;
-        background-color: rgba(58, 58, 58, 0.596);
-        > a > svg {
-          color: inherit;
-        }
-      }
-    }
-    a {
-      margin-left: 17px;
-      font-size: 16.5px;
-      font-weight: 500;
-      > svg {
-        position: absolute;
-        right: 5px;
-        top: calc(50% - 16px / 2);
-        transition: 1s all ease;
-        color: transparent;
-      }
-    }
-  }
 }
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+// @media (min-width: 800px) {
+//   .barraNavegacionBottom {
+//     display: none;
+//   }
+
+//   .barraNavegacionTop {
+//     height: $altura-top-navbar;
+//     display: flex;
+//     color: white;
+//     border-radius: 0 0 5px 5px;
+//     z-index: 10;
+//     transition: all 0.3s ease;
+//   }
+
+//   .contenidoBarra {
+//     width: 90%;
+//     // margin-top: 30px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+//   .logo {
+//     max-width: 8%;
+//     margin-bottom: 8px;
+//     img {
+//       height: 100%;
+//       width: 100%;
+//       max-width: 100%;
+//       max-height: 100%;
+//       display: block;
+//       margin: auto;
+//       object-fit: cover;
+//     }
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }
+//   .elementosNavegacion {
+//     width: 30%;
+//     margin-bottom: 35px;
+//     position: relative;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     border-radius: 5px;
+//     backdrop-filter: blur(10px);
+//     background-color: rgba(58, 58, 58, 0.425);
+//     > div {
+//       height: 47px;
+//       display: flex;
+//       align-items: center;
+//       transition: all 0.4s ease;
+//       border-radius: 2px 2px 0 0;
+//       background-color: transparent;
+//       &:hover {
+//         background-color: rgba(58, 58, 58, 0.616);
+//       }
+//     }
+//     .expandir {
+//       &:hover {
+//         background-color: inherit;
+//       }
+//     }
+//     > div > a {
+//       padding: 0 10px;
+//       display: flex;
+//       align-items: center;
+//       font-size: $tamaño-fuente-navbar;
+//       font-weight: 500;
+//       border-bottom: 1px solid transparent;
+//       transition: all 0.7s ease;
+//       &:hover {
+//         border-bottom: 1px solid white;
+//       }
+//     }
+//     a svg {
+//       margin-left: 5px;
+//     }
+//   }
+
+//   .elementosNavegacion .proyectos {
+//     &:hover {
+//       .flotanteProyectos {
+//         display: flex;
+//       }
+//     }
+//   }
+//   .elementosNavegacion .proyectos .flotanteProyectos {
+//     display: none;
+//     position: absolute;
+//     top: 5.3vh;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     border-radius: 5px;
+//     background-color: rgba(58, 58, 58, 0.514);
+//   }
+//   .flotanteProyectos .contenedorImagen {
+//     width: 45vh;
+//     max-width: 45vh;
+//     height: 25vh;
+//     display: flex;
+//     justify-content: center;
+//     margin: 15px 15px 15px 10px;
+//     overflow: hidden;
+//     position: relative;
+//     border-radius: 5px;
+//     border: 1px solid black;
+//     img {
+//       height: 100%;
+//       width: 100%;
+//       max-width: 100%;
+//       max-height: 100%;
+//       display: block;
+//       margin: auto;
+//       object-fit: cover;
+//       transition: all 0.2s ease-in;
+//       &:hover {
+//         cursor: pointer;
+//         transform: scale(1.08);
+//       }
+//     }
+//     button {
+//       width: 90%;
+//       position: absolute;
+//       display: flex;
+//       justify-content: center;
+//       bottom: 10px;
+//       padding: 12px 0;
+//       outline: none;
+//       background-color: rgba(255, 255, 255, 0.884);
+//       border-radius: 25px;
+//       border: none;
+//       border: 1px solid transparent;
+//       transition: all 0.3s ease;
+//       p {
+//         width: 90%;
+//         font-size: 17px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         border-bottom: 1px solid transparent;
+//       }
+//       &:hover {
+//         cursor: pointer;
+//         transform: scale(1.05);
+//         p {
+//           text-decoration: underline;
+//         }
+//       }
+//     }
+//   }
+
+//   .flotanteProyectos .listaProyectos {
+//     width: 30ch;
+//     margin-top: 12px;
+//     margin-left: 12px;
+//     ul {
+//       list-style: none;
+//       line-height: 2rem;
+//     }
+//     hr {
+//       width: 90%;
+//     }
+//     a {
+//       border-bottom: transparent;
+//       transition: all 0.5s ease;
+//       font-weight: 400;
+//       font-size: 16.5px;
+//       &:hover {
+//         border-bottom: 1px solid white;
+//       }
+//     }
+//     .todosLosProyectos {
+//       transition: all 0.3s ease;
+//       &:hover {
+//         transform: scale(1.02) translateX(2px) translateY(-1px);
+//       }
+//       a {
+//         display: flex;
+//         align-items: center;
+//         margin-left: 12px;
+//         text-decoration: underline;
+//         transition: all 0.5s ease;
+//         &:hover {
+//           border-bottom: 1px solid transparent;
+//           span {
+//             display: flex;
+//           }
+//         }
+//         span {
+//           display: none;
+//           align-items: center;
+//           transition: all 0.3s ease-in;
+//           &:hover {
+//             transform: translateX(25px);
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .flotanteProyectos .contenedorImagen:hover img,
+//   .flotanteProyectos .contenedorImagen button:hover ~ img {
+//     transform: scale(1.08);
+//   }
+
+//   .elementosNavegacion .nosotros {
+//     position: relative;
+//     &:hover {
+//       .flotanteNosotros {
+//         display: flex;
+//       }
+//     }
+//   }
+//   .elementosNavegacion .nosotros .flotanteNosotros {
+//     display: none;
+//     $width: 25vh;
+//     width: $width;
+//     position: absolute;
+//     top: 5.3vh;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     flex-direction: column;
+//     border-radius: 5px;
+//     background-color: rgba(58, 58, 58, 0.623);
+//     box-shadow: 0px 0px 10px -1px rgb(0 0 0 / 16%);
+//     ul {
+//       list-style: none;
+//       line-height: 3rem;
+//     }
+//     li {
+//       position: relative;
+//       transition: 0.5s all ease;
+//       background-color: transparent;
+//       &:hover {
+//         cursor: pointer;
+//         background-color: rgba(58, 58, 58, 0.596);
+//         > a > svg {
+//           color: inherit;
+//         }
+//       }
+//     }
+//     a {
+//       margin-left: 17px;
+//       font-size: 16.5px;
+//       font-weight: 500;
+//       > svg {
+//         position: absolute;
+//         right: 5px;
+//         top: calc(50% - 16px / 2);
+//         transition: 1s all ease;
+//         color: transparent;
+//       }
+//     }
+//   }
+// }
