@@ -40,7 +40,7 @@ export default function Landing() {
       <section className={s.acercaDe}>
         <div>
           <div className={s.contenidoAcercaDe}>
-            <h1>¿Por que existimos?</h1>
+            <h1>Nuestro Compromiso</h1>
             <p>
               Nuestro trabajo está dedicado a dejar un{" "}
               <span>mejor planeta</span> a nuestros hijos y mejores hijos a
@@ -59,7 +59,7 @@ export default function Landing() {
       <section className={s.proyectos}>
         <div>
           <div className={s.contenidoProyectos}>
-            <h1>El corazón de nuestro trabajo</h1>
+            <h1>Nuestro trabajo</h1>
             <div className={s.card}>
               <Image src={ccr} alt="ccr" />
               <h3>Centro Comunitario Resiliente</h3>

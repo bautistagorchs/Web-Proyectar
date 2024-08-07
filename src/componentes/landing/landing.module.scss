@@ -94,9 +94,10 @@
 
 section.acercaDe {
   position: relative;
-  height: calc(100vh - $altura-top-navbar-scrolled - $altura-bottom-navbar);
-  background: /*linear-gradient(#58b446, #07516e )*/ black;
-  // background-color: $celeste-claro-azulado;
+  height: calc(
+    100vh - $altura-top-navbar-scrolled - $altura-bottom-navbar + 3vh
+  );
+  background: linear-gradient(#58b446, #07516e);
 
   > div {
     display: flex;
@@ -112,8 +113,6 @@ section.acercaDe {
     h1 {
       color: white;
       font-size: 28px;
-      // -webkit-text-stroke-width: 0.5px;
-      // -webkit-text-stroke-color: rgb(180, 180, 0);
     }
     p {
       color: whitesmoke;
