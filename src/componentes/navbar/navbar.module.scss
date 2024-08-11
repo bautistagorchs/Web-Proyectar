@@ -158,7 +158,7 @@ $margen-elementos-navbar: 8%;
       }
     }
     > div > a {
-      padding: 0 20px;
+      padding: 0 10px;
       display: flex;
       align-items: center;
       font-size: $tamaño-fuente-navbar;
@@ -181,7 +181,6 @@ $margen-elementos-navbar: 8%;
 }
 
 .barraNavegacionTop .expandibleLaptop {
-  display: none;
   width: 100%;
   height: calc(100vh - $altura-top-navbar-laptop);
   position: absolute;
@@ -191,6 +190,9 @@ $margen-elementos-navbar: 8%;
   justify-content: center;
   align-items: flex-end;
   background-color: rgb(58, 58, 58);
+  // animation: dropDown 0.4s ease 0 1 forwards fill-mode;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
   .expandibleContenido {
     width: 80%;
     height: 80%;
@@ -222,7 +224,7 @@ $margen-elementos-navbar: 8%;
         }
       }
     }
-    .redesSociales {
+    .footer {
       width: 100%;
       margin-top: 20%;
       position: relative;
@@ -238,6 +240,7 @@ $margen-elementos-navbar: 8%;
         a {
           display: flex;
           align-items: center;
+          font-size: 15px;
           border-bottom: 1px solid transparent;
           transition: all 0.4s ease;
           &:hover {
@@ -256,15 +259,22 @@ $margen-elementos-navbar: 8%;
         gap: 1rem;
         h4 {
           font-weight: 400;
+          font-size: 15px;
         }
         div {
           display: flex;
           align-items: center;
-          gap: 1rem;
-
+          .primero {
+            padding: 0 5px 0 0;
+          }
           a {
+            padding: 0 10px;
             display: flex;
             align-items: center;
+            transition: all 0.4s ease;
+            &:hover {
+              transform: scale(1.5) translateY(-4px);
+            }
           }
         }
       }
@@ -348,11 +358,19 @@ $margen-elementos-navbar: 8%;
 }
 
 @media (min-width: 900px) {
+  .barraNavegacionTop.cambiarBackground {
+    background-color: rgb(58, 58, 58);
+    .elementosNavegacion {
+      color: white;
+    }
+    &:hover {
+      background-color: rgb(58, 58, 58);
+    }
+  }
   .barraNavegacionTop {
     height: $altura-top-navbar-laptop;
     backdrop-filter: blur(7px);
     background-color: rgba(58, 58, 58, 0.37);
-    border-radius: 0 0 5px 5px;
     &:hover {
       backdrop-filter: blur(15px);
       background-color: rgba(58, 58, 58, 0.514);
@@ -545,7 +563,6 @@ $margen-elementos-navbar: 8%;
         transition: all 0.3s ease;
         &:hover {
           cursor: pointer;
-          // background-color: rgba(58, 58, 58, 0.596);
           > a {
             border-bottom: 1px solid white;
             > svg {
@@ -602,7 +619,38 @@ $margen-elementos-navbar: 8%;
       display: none;
     }
     .expandibleLaptop.show {
-      display: flex;
+      // display: flex;
+      transform: translateY(0%);
+    }
+  }
+  .barraNavegacionTop.cambiarBackground::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    top: 100%;
+    z-index: 2;
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.49) 50%,
+      rgba(255, 255, 255, 0.5) 51%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.49) 50%,
+      rgba(255, 255, 255, 0.5) 51%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .barraNavegacionTop.navbarScrolled {
+    height: $altura-top-navbar-laptop;
+    background-color: inherit;
+    box-shadow: unset;
+    .contenidoBarra {
+      margin-top: none;
     }
   }
   .barraNavegacionBottom {

@@ -2,7 +2,7 @@
 
 import CCR from "@/archivos/foto_ccr_blended.png";
 import logo_apaisado from "@/archivos/logo_apaisadp_gris_fondo_transparente.png";
-import logo from "@/archivos/logo_gris_fondo_transparente.png";
+import logoB from "@/archivos/logo_blanco_fondo_transparente.png";
 import reciclaje from "@/archivos/proyecto_reciclaje.png";
 import { Spin as Hamburger } from "hamburger-react";
 import Image from "next/image";
@@ -52,14 +52,14 @@ const Navbar = () => {
       <nav
         className={`${s.barraNavegacionTop} ${
           scrollY > 10 ? s.navbarScrolled : ""
-        }`}
+        } ${!isOpen ? "" : s.cambiarBackground}`}
       >
         <div className={s.contenidoBarra}>
           <div className={s.logo}>
-            {scrollY > 10 ? (
+            {scrollY > 10 && window.innerWidth < 900 ? (
               <Image src={logo_apaisado} alt="Logo a color" />
             ) : (
-              <Image src={logo} alt="Logo a color" />
+              <Image src={logoB} alt="Logo a color" />
             )}
           </div>
           <div className={s.elementosNavegacion}>
@@ -179,7 +179,7 @@ const Navbar = () => {
             </div>
             <div className={s.expandir}>
               <Hamburger
-                color="#444444"
+                color={isOpen ? "white" : "#444444"}
                 rounded
                 distance="sm"
                 size={30}
@@ -292,7 +292,7 @@ const Navbar = () => {
                 <h4>Donacion mensual</h4>
               </div>
             </div>
-            <div className={s.redesSociales}>
+            <div className={s.footer}>
               <div className={s.contacto}>
                 <Link href={""}>
                   <PiMapPinSimpleLight /> Av. Libertador 1845, Martinez
@@ -308,7 +308,7 @@ const Navbar = () => {
               <div className={s.iconos}>
                 <h4>Encontranos en:</h4>
                 <div>
-                  <Link href={""}>
+                  <Link href={""} className={s.primero}>
                     <SlSocialInstagram size={25} />
                   </Link>
                   <Link href={""}>
