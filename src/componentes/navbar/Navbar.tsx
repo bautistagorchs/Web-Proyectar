@@ -1,23 +1,29 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import s from "./navbar.module.scss";
+import CCR from "@/archivos/foto_ccr_blended.png";
+import logo_apaisado from "@/archivos/logo_apaisadp_gris_fondo_transparente.png";
+import logo from "@/archivos/logo_gris_fondo_transparente.png";
+import reciclaje from "@/archivos/proyecto_reciclaje.png";
+import { Spin as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/archivos/logo_gris_fondo_transparente.png";
-import logo_apaisado from "@/archivos/logo_apaisadp_gris_fondo_transparente.png";
-import { Spin as Hamburger } from "hamburger-react";
-import { TbWaveSawTool } from "react-icons/tb";
+import { useEffect, useState } from "react";
 import { AiOutlineTeam } from "react-icons/ai";
 import { BiDonateHeart } from "react-icons/bi";
+import { GoArrowRight, GoHome } from "react-icons/go";
 import {
   RiArrowDownSLine,
   RiArrowRightSLine,
   RiArrowUpSLine,
 } from "react-icons/ri";
-import { GoArrowRight, GoHome } from "react-icons/go";
-import CCR from "@/archivos/foto_ccr_blended.png";
-import reciclaje from "@/archivos/proyecto_reciclaje.png";
+import { TbWaveSawTool } from "react-icons/tb";
+import s from "./navbar.module.scss";
+// import { LiaMapMarkerAltSolid } from "react-icons/lia";
+import { PiLinkedinLogoLight, PiMapPinSimpleLight } from "react-icons/pi";
+import { CiFacebook, CiMail } from "react-icons/ci";
+import { FiPhone } from "react-icons/fi";
+import { SlSocialInstagram } from "react-icons/sl";
+import { BsTwitterX } from "react-icons/bs";
 
 const Navbar = () => {
   const initialState = {
@@ -131,10 +137,45 @@ const Navbar = () => {
                 </ul>
               </div>
             </div>
-            <div className={s.colabora}>
+            <div className={s.donar}>
               <Link href="">
-                Hace un cambio <BiDonateHeart size={21} />
+                Se parte del cambio <BiDonateHeart size={21} />
               </Link>
+              <div className={s.flotanteDonar}>
+                <ul>
+                  <li>
+                    <Link href={""}>
+                      Apoyar economicamente <RiArrowRightSLine />{" "}
+                    </Link>
+                  </li>
+                  <li className={s.recursos}>
+                    <Link href={""}>
+                      ¿Que mas puedo donar? <RiArrowRightSLine />
+                    </Link>
+                    <div className={s.flotanteListaDonaciones}>
+                      <ul>
+                        {/* <div className={s.primero}> */}
+                        <li>Ropa</li>
+                        <li>Comida</li>
+                        <li>Libros</li>
+                        <li>Utiles escolares</li>
+                        {/* </div> */}
+                        {/* <div> */}
+                        <li>Vajilla</li>
+                        <li>Juegos</li>
+                        <li>Mantas</li>
+                        <li className={s.ultimo}>Y mucho mas...</li>
+                        {/* </div> */}
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <Link href={""}>
+                      Otras formas de colaborar <RiArrowRightSLine />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className={s.expandir}>
               <Hamburger
@@ -149,7 +190,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className={`${s.expandible} ${!isOpen ? "" : s.show}`}>
+        <div className={`${s.expandibleMobile} ${!isOpen ? "" : s.show}`}>
           <hr />
           <div className={s.contenidoExpandible}>
             <ul className={s.menu}>
@@ -229,6 +270,61 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
+        <div className={`${s.expandibleLaptop} ${!isOpen ? "" : s.show}`}>
+          <div className={s.expandibleContenido}>
+            <div className={s.infoContainer}>
+              <div>
+                <h2>Capital humano</h2>
+                {/* <h4>Equipo</h4> */}
+                <h4>Testimonios de valor</h4>
+                <h4>Nuestros asesores</h4>
+                <h4>Empresas que nos apoyan</h4>
+              </div>
+              <div>
+                <h2>Sobre nosotros</h2>
+                <h4>Linea de tiempo</h4>
+                <h4>Noticias</h4>
+                <h4>Algun item mas</h4>
+              </div>
+              <div>
+                <h2>Colabora</h2>
+                <h4>Hace a tu empresa parte</h4>
+                <h4>Donacion mensual</h4>
+              </div>
+            </div>
+            <div className={s.redesSociales}>
+              <div className={s.contacto}>
+                <Link href={""}>
+                  <PiMapPinSimpleLight /> Av. Libertador 1845, Martinez
+                </Link>
+                <Link href={""}>
+                  <CiMail /> proyectarong@proyectar.com.ar
+                </Link>
+                <Link href={""}>
+                  {" "}
+                  <FiPhone /> +54 9 11 5474-8745
+                </Link>
+              </div>
+              <div className={s.iconos}>
+                <h4>Encontranos en:</h4>
+                <div>
+                  <Link href={""}>
+                    <SlSocialInstagram size={25} />
+                  </Link>
+                  <Link href={""}>
+                    <CiFacebook size={27} />
+                  </Link>
+                  <Link href={""}>
+                    <PiLinkedinLogoLight size={27} />
+                  </Link>
+                  <Link href={""}>
+                    <BsTwitterX size={25} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
       <nav className={s.barraNavegacionBottom}>
         <div className={s.elementosNavegacion}>
@@ -244,7 +340,7 @@ const Navbar = () => {
               Proyectos
             </Link>
           </div>
-          <div className={s.colabora}>
+          <div className={s.donar}>
             <Link href="">
               <BiDonateHeart size={21} />
               Impulsá

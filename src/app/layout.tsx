@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { roboto } from "@/fuentes/fuentes";
-import "./globals.css";
 import Navbar from "@/componentes/navbar/Navbar";
-import Footer from "@/componentes/footer/Footer";
+import { poppins } from "@/fuentes/fuentes";
+import type { Metadata } from "next";
+import "./globals.css";
+// import Footer from "@/componentes/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Proyectar ONG",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={poppins.className}>
         <Navbar />
         {children}
         {/* <Footer /> */}
