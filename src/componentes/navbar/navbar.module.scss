@@ -83,11 +83,6 @@ $margen-elementos-navbar: 8%;
       font-size: 1rem;
       transition: background 0.3s ease;
     }
-
-    .menuButton:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
     .submenu {
       display: none;
       width: 90%;
@@ -113,9 +108,6 @@ $margen-elementos-navbar: 8%;
       }
     }
 
-    .submenu a:hover {
-      color: black;
-    }
     .menu .liButton {
       padding-bottom: 1.5rem;
       button {
@@ -123,7 +115,7 @@ $margen-elementos-navbar: 8%;
         color: white;
         text-transform: uppercase;
         font-weight: 600;
-        background-color: orange;
+        background-color: $celeste-claro-azulado;
         border-radius: 5px;
         border: none;
       }
@@ -148,7 +140,7 @@ $margen-elementos-navbar: 8%;
       border-radius: 2px 2px 0 0;
       background-color: transparent;
       &:hover {
-        background-color: rgba(58, 58, 58, 0.616);
+        // background-color: rgba(58, 58, 58, 0.616);
       }
     }
     .expandir {
@@ -158,16 +150,12 @@ $margen-elementos-navbar: 8%;
       }
     }
     > div > a {
-      padding: 0 10px;
       display: flex;
       align-items: center;
       font-size: $tamaño-fuente-navbar;
       font-weight: 500;
       border-bottom: 1px solid transparent;
       transition: all 0.7s ease;
-      &:hover {
-        border-bottom: 1px solid white;
-      }
     }
     a svg {
       margin-left: 5px;
@@ -363,18 +351,15 @@ $margen-elementos-navbar: 8%;
     .elementosNavegacion {
       color: white;
     }
-    &:hover {
-      background-color: rgb(58, 58, 58);
-    }
   }
   .barraNavegacionTop {
     height: $altura-top-navbar-laptop;
     backdrop-filter: blur(7px);
     background-color: rgba(58, 58, 58, 0.37);
-    &:hover {
-      backdrop-filter: blur(15px);
-      background-color: rgba(58, 58, 58, 0.514);
-    }
+    // &:hover {
+    //   backdrop-filter: blur(15px);
+    //   background-color: rgba(58, 58, 58, 0.514);
+    // }
     .contenidoBarra {
       width: 100%;
       flex-direction: column;
@@ -392,14 +377,15 @@ $margen-elementos-navbar: 8%;
       .donar {
         display: flex;
       }
-      color: $gris-del-logo;
+      color: white;
+      // color: $gris-del-logo;
       margin-top: 2px;
       > div {
         height: unset;
-        padding: 10px 10px 17px 10px;
+        padding: 10px 15px 17px 15px;
       }
       > div:hover {
-        background-color: rgba(58, 58, 58, 0.616);
+        background-color: rgb(58, 58, 58);
         > a {
           border-bottom: 1px solid $gris-del-logo;
         }
@@ -431,7 +417,6 @@ $margen-elementos-navbar: 8%;
       transform: translateX(-50%);
       color: white;
       border-radius: 5px;
-      // background-color: rgba(58, 58, 58, 0.514);
       background-color: rgb(58, 58, 58);
     }
     .flotanteProyectos .contenedorImagen,

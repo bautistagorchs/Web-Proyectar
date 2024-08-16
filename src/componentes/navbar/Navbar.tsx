@@ -154,18 +154,14 @@ const Navbar = () => {
                     </Link>
                     <div className={s.flotanteListaDonaciones}>
                       <ul>
-                        {/* <div className={s.primero}> */}
                         <li>Ropa</li>
                         <li>Comida</li>
                         <li>Libros</li>
                         <li>Utiles escolares</li>
-                        {/* </div> */}
-                        {/* <div> */}
                         <li>Vajilla</li>
                         <li>Juegos</li>
                         <li>Mantas</li>
                         <li className={s.ultimo}>Y mucho mas...</li>
-                        {/* </div> */}
                       </ul>
                     </div>
                   </li>
@@ -179,7 +175,7 @@ const Navbar = () => {
             </div>
             <div className={s.expandir}>
               <Hamburger
-                color={isOpen ? "white" : "#444444"}
+                color={!isOpen ? "white" : "#444444"}
                 rounded
                 distance="sm"
                 size={30}
