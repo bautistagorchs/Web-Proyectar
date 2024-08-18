@@ -7,6 +7,9 @@ import img from "@/archivos/niño_parado_espaldas.jpg";
 import ccr from "@/archivos/foto_ccr_majo_jovenes.jpg";
 import bolson from "@/archivos/foto_bolson_pet.png";
 import barrioLimpio from "@/archivos/foto_casa_euge_pet.jpg";
+import reconquista from "@/archivos/noticia_reconquista_vecinos_abrazo.jpg";
+import basura_rio from "@/archivos/jovenes_basura_rio.jpg";
+import edu_mas_ale from "@/archivos/edu_con_ale_foto_frente_comedor_garrote.jpeg";
 
 export default function Landing() {
   return (
@@ -14,15 +17,16 @@ export default function Landing() {
       <main className={s.main}>
         <Image src={img} alt="hsd" className={s.video} />
         {/* <video autoPlay loop muted className={s.video}>
-        <source
-        src={
-          "https://videos.pexels.com/video-files/6753733/6753733-uhd_2560_1440_30fps.mp4"
-          // "https://videos.pexels.com/video-files/2330708/2330708-uhd_2560_1440_24fps.mp4"
-          }
-          type="video/mp4"
+          <source
+            src={
+              // "https://drive.google.com/file/d/1Jt8v0wVatOpqU8THYRLBRBgOSpTc5pLR/view?usp=sharing"
+              "https://videos.pexels.com/video-files/6753733/6753733-uhd_2560_1440_30fps.mp4"
+              // "https://videos.pexels.com/video-files/2330708/2330708-uhd_2560_1440_24fps.mp4"
+            }
+            type="video/mp4"
           />
           Your browser does not support the video tag.
-          </video> */}
+        </video> */}
         <div className={s.mainContent}>
           <div className={s.left}>
             <h1>¿Que planeta le dejamos a nuestros hijos?</h1>
@@ -97,6 +101,50 @@ export default function Landing() {
               <p>Poner una cuarta card. No se de que puede ser pero agregar</p>
               <button>Saber más</button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className={s.noticias}>
+        <div className={s.contenedorNoticias}>
+          <div className={s.contenidoNoticias}>
+            <h5>Actualizaciones sobre Proyectar</h5>
+            <h1>Noticias</h1>
+            <div className={s.card}>
+              <div className={s.contenedorImg} id={s.norteOnline}>
+                <Image src={edu_mas_ale} alt="Imagen notica proyectar rio" />
+                <h3>Impulsando el triple impacto</h3>
+              </div>
+              <h6>por Norte Online - 30 enero 2023</h6>
+              <p>
+                La ONG que impulsa el triple impacto en los barrios más
+                vulnerables
+              </p>
+              <button className={s.leerMas}>Leer más</button>
+            </div>
+            <div className={s.card}>
+              <div className={s.contenedorImg}>
+                <Image src={basura_rio} alt="Imagen notica proyectar rio" />
+                <h3>Proyectar</h3>
+              </div>
+              <h6>por Perfil, Marie Claire - 05 octubre 2021</h6>
+              <p>Una ONG que apuesta fuerte por la economía circular</p>
+              <button className={s.leerMas}>Leer más</button>
+            </div>
+            <div className={s.card}>
+              <div className={s.contenedorImg}>
+                <Image src={reconquista} alt="Imagen notica reconquista" />
+                <h3>Reconquista en alerta</h3>
+              </div>
+              <h6>por La Nacion - 28 Feb 2019</h6>
+              <p>
+                El ingenioso plan de vecinos para salvar al río y terminar con
+                la basura
+              </p>
+              <button className={s.leerMas}>Leer más</button>
+            </div>
+            <button className={s.todasLasNovedades}>
+              Ver todas las novedades
+            </button>
           </div>
         </div>
       </section>

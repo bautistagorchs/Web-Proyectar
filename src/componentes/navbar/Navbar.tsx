@@ -18,7 +18,6 @@ import {
 } from "react-icons/ri";
 import { TbWaveSawTool } from "react-icons/tb";
 import s from "./navbar.module.scss";
-// import { LiaMapMarkerAltSolid } from "react-icons/lia";
 import { PiLinkedinLogoLight, PiMapPinSimpleLight } from "react-icons/pi";
 import { CiFacebook, CiMail } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
@@ -32,6 +31,7 @@ const Navbar = () => {
   };
   const [isOpen, setOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [innerWidth, setInnerWidth] = useState(0);
   const [seccionActiva, setseccionActiva] = useState(initialState);
   const handleMenuClick = (seccion: string) => {
     setseccionActiva((prevState) => ({
@@ -40,6 +40,9 @@ const Navbar = () => {
     }));
   };
   useEffect(() => {
+    if (window !== undefined) {
+      setInnerWidth(window.innerWidth);
+    }
     let scroll = window.scrollY;
     setScrollY(scroll);
     window.addEventListener("scroll", function () {
@@ -47,6 +50,7 @@ const Navbar = () => {
       setScrollY(scroll);
     });
   }, []);
+
   return (
     <>
       <nav
@@ -175,7 +179,7 @@ const Navbar = () => {
             </div>
             <div className={s.expandir}>
               <Hamburger
-                color={!isOpen ? "white" : "#444444"}
+                color={innerWidth < 900 ? "#444444" : "white"}
                 rounded
                 distance="sm"
                 size={30}
