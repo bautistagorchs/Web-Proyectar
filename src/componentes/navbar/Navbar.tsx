@@ -2,7 +2,8 @@
 
 import CCR from "@/assets/foto_ccr_blended.png";
 import logo_apaisado from "@/assets/logo_apaisadp_gris_fondo_transparente.png";
-import logoB from "@/assets/logo_blanco_fondo_transparente.png";
+import logoBlanco from "@/assets/logo_blanco_fondo_transparente.png";
+import logoGris from "@/assets/logo_gris_fondo_transparente.png";
 import reciclaje from "@/assets/proyecto_reciclaje.png";
 import { Spin as Hamburger } from "hamburger-react";
 import Image from "next/image";
@@ -63,7 +64,10 @@ const Navbar = () => {
             {scrollY > 10 && window.innerWidth < 900 ? (
               <Image src={logo_apaisado} alt="Logo a color" />
             ) : (
-              <Image src={logoB} alt="Logo a color" />
+              <Image
+                src={isOpen && window.innerWidth < 900 ? logoGris : logoBlanco}
+                alt="Logo a color"
+              />
             )}
           </div>
           <div className={s.elementosNavegacion}>

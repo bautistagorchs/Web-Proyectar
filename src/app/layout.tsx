@@ -16,6 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="https://proyectar.org/wp-content/uploads/2024/07/cropped-favicon-32x32.png"
+          sizes="any"
+        />
+      </head>
       <body className={poppins.className}>
         <Navbar />
         {children}
