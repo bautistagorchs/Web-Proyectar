@@ -1,0 +1,85 @@
+@import "../../app/globals.scss";
+section.acercaDe {
+  position: relative;
+  height: calc(
+    100vh - $altura-top-navbar-scrolled - $altura-bottom-navbar + 3vh
+  );
+  background: linear-gradient(#58b446, #07516e);
+
+  > div {
+    display: flex;
+    justify-content: center;
+  }
+  .contenidoAcercaDe {
+    $color: white;
+    $color-dark: white;
+    // $color: rgb(37, 35, 35);
+    // $color-dark: rgb(22, 22, 22);
+    width: 90%;
+    margin-top: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    h1 {
+      color: $color-dark;
+      font-size: 27px;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: rgba(0, 255, 106, 0.616);
+    }
+    p {
+      color: $color;
+      text-align: center;
+      span {
+        letter-spacing: 0.2px;
+        font-weight: 700;
+      }
+    }
+    button {
+      margin-top: 7%;
+      padding: 15px 22px;
+      font-size: 17px;
+      font-weight: 600;
+      color: $color-dark;
+      background-color: transparent;
+      border-radius: 8px;
+      border: 1px solid $color-dark;
+      &:focus,
+      &:active {
+        outline: none;
+        border: 2px solid rgb(255, 255, 255);
+      }
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    $width: 85%;
+    width: $width;
+    bottom: 0;
+    left: calc((100% - $width) / 2);
+    z-index: 2;
+    background: -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.49) 50%,
+      rgba(255, 255, 255, 0.5) 51%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.49) 50%,
+      rgba(255, 255, 255, 0.5) 51%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.49) 50%,
+      rgba(255, 255, 255, 0.5) 51%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}

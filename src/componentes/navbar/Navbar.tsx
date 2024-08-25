@@ -1,9 +1,9 @@
 "use client";
 
-import CCR from "@/archivos/foto_ccr_blended.png";
-import logo_apaisado from "@/archivos/logo_apaisadp_gris_fondo_transparente.png";
-import logoB from "@/archivos/logo_blanco_fondo_transparente.png";
-import reciclaje from "@/archivos/proyecto_reciclaje.png";
+import CCR from "@/assets/foto_ccr_blended.png";
+import logo_apaisado from "@/assets/logo_apaisadp_gris_fondo_transparente.png";
+import logoB from "@/assets/logo_blanco_fondo_transparente.png";
+import reciclaje from "@/assets/proyecto_reciclaje.png";
 import { Spin as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -335,7 +335,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className={s.proyectos}>
-            <Link href="">
+            <Link href="/#empresas">
               <TbWaveSawTool size={20} />
               Proyectos
             </Link>
