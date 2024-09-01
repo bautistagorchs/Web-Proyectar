@@ -97,16 +97,13 @@ const Navbar = () => {
                   <hr />
                   <ul>
                     <li>
-                      <Link href="">- Barrio Limpio</Link>
+                      <Link href=""> Barrio Limpio</Link>
                     </li>
                     <li>
-                      <Link href="">- Huertas Agroecológicas</Link>
+                      <Link href=""> Biocorredores</Link>
                     </li>
                     <li>
-                      <Link href="">- Saneamiento Reconquista</Link>
-                    </li>
-                    <li>
-                      <Link href="">- Botellas de Amor</Link>
+                      <Link href=""> Educacion ambiental</Link>
                     </li>
                     <li className={s.todosLosProyectos}>
                       <Link href="">
@@ -134,6 +131,11 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link href={""}>
+                      Nuestra historia <RiArrowRightSLine />{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={""}>
                       Equipo <RiArrowRightSLine />
                     </Link>
                   </li>
@@ -156,26 +158,36 @@ const Navbar = () => {
                       Contribuí con tu aporte <RiArrowRightSLine />{" "}
                     </Link>
                   </li>
-                  <li className={s.recursos}>
-                    <Link href={""}>
-                      ¿Que mas puedo hacer? <RiArrowRightSLine />
-                    </Link>
-                    <div className={s.flotanteListaDonaciones}>
-                      <ul>
-                        <li>Alimentos</li>
-                        <li>Ropa</li>
-                        <li>Muebles</li>
-                        <li>Vajilla</li>
-                        <li>Juegos</li>
-                        <li className={s.ultimo}>Y mucho mas...</li>
-                      </ul>
-                    </div>
+                  <li className={s.segundoItemDonar}>
+                    ¿Que mas puedo hacer? <RiArrowDownSLine />
                   </li>
-                  {/* <li>
-                    <Link href={""}>
-                      Otras formas de colaborar <RiArrowRightSLine />
-                    </Link>
-                  </li> */}
+                  <div className={s.opcionesDonarContainer}>
+                    <li className={s.recursos}>
+                      <Link href={""}>
+                        Donar: <RiArrowRightSLine />
+                      </Link>
+                      <div className={s.flotanteListaDonaciones}>
+                        <ul>
+                          <li>Alimentos</li>
+                          <li>Ropa</li>
+                          <li>Muebles</li>
+                          <li>Vajilla</li>
+                          <li>Juegos</li>
+                          <li className={s.ultimo}>Y mucho mas...</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <Link href={""}>
+                        Cocinar viandas <RiArrowRightSLine />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={""}>
+                        Tejer mantas <RiArrowRightSLine />
+                      </Link>
+                    </li>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -267,7 +279,7 @@ const Navbar = () => {
                 <h4 className={s.menuButton}>Nos acompañan</h4>
               </li>
               <li className={s.liButton}>
-                <button className={s.button}>Colabora</button>
+                <button className={s.button}>Colaborá</button>
               </li>
             </ul>
           </div>
@@ -345,7 +357,7 @@ const Navbar = () => {
           <div className={s.donar}>
             <Link href="">
               <BiDonateHeart size={21} />
-              Impulsá
+              Colaborá
             </Link>
           </div>
         </div>

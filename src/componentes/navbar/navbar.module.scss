@@ -131,14 +131,16 @@ $margen-elementos-navbar: 8%;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    border-radius: 5px;
+    // border: 1px solid gray;
+    gap: 1.5rem;
     > div {
       height: 47px;
       display: flex;
       align-items: center;
       transition: all 0.4s ease;
-      border-radius: 2px 2px 0 0;
+      border-radius: 3px 3px 0 0;
       background-color: transparent;
+      // border: 1px solid orange;
     }
     .expandir {
       z-index: 20;
@@ -354,10 +356,6 @@ $margen-elementos-navbar: 8%;
     height: $altura-top-navbar-laptop;
     backdrop-filter: blur(7px);
     background-color: rgba(58, 58, 58, 0.37);
-    // &:hover {
-    //   backdrop-filter: blur(15px);
-    //   background-color: rgba(58, 58, 58, 0.514);
-    // }
     .contenidoBarra {
       width: 100%;
       flex-direction: column;
@@ -376,7 +374,6 @@ $margen-elementos-navbar: 8%;
         display: flex;
       }
       color: white;
-      // color: $gris-del-logo;
       margin-top: 2px;
       > div {
         height: unset;
@@ -414,7 +411,7 @@ $margen-elementos-navbar: 8%;
       left: 50%;
       transform: translateX(-50%);
       color: white;
-      border-radius: 5px;
+      border-radius: 3px;
       background-color: rgb(58, 58, 58);
     }
     .flotanteProyectos .contenedorImagen,
@@ -477,9 +474,16 @@ $margen-elementos-navbar: 8%;
       width: 30ch;
       margin-top: 12px;
       margin-left: 12px;
+      // border: 1px solid orange;
       ul {
+        height: 70%;
+        margin-top: 5%;
         list-style: none;
         line-height: 1.9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // border: 1px solid orange;
       }
       hr {
         width: 90%;
@@ -501,7 +505,7 @@ $margen-elementos-navbar: 8%;
         a {
           display: flex;
           align-items: center;
-          margin-left: 12px;
+          margin-left: 0;
           text-decoration: underline;
           transition: all 0.5s ease;
           &:hover {
@@ -536,6 +540,7 @@ $margen-elementos-navbar: 8%;
       width: $width;
       flex-direction: column;
       ul {
+        padding: 10px 0;
         list-style: none;
         line-height: 3rem;
       }
@@ -554,12 +559,28 @@ $margen-elementos-navbar: 8%;
           }
         }
       }
+      .segundoItemDonar {
+        svg {
+          margin-right: 2px;
+        }
+        &:hover {
+          svg {
+            color: inherit;
+          }
+        }
+      }
+      .opcionesDonarContainer {
+        // margin-left: 7%;
+        margin-top: -10px;
+        // border: 1px solid orange;
+      }
       .recursos:hover {
         .flotanteListaDonaciones {
           display: block;
         }
       }
-      a {
+      a,
+      .segundoItemDonar {
         margin-left: 22px;
         font-size: 16.5px;
         font-weight: 500;
@@ -568,7 +589,7 @@ $margen-elementos-navbar: 8%;
 
         > svg {
           position: absolute;
-          right: 5px;
+          right: 10px;
           top: calc(50% - 16px / 2);
           transition: 0.7s all ease;
           color: transparent;
@@ -653,6 +674,11 @@ $margen-elementos-navbar: 8%;
     .flotanteProyectos .contenedorImagen {
       width: 45vh;
       height: 25vh;
+    }
+    .flotanteProyectos .listaProyectos {
+      ul {
+        height: 77%;
+      }
     }
   }
 }
