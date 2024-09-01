@@ -93,7 +93,7 @@ const Navbar = () => {
                   </button>
                 </div>
                 <div className={s.listaProyectos}>
-                  <h4>Nuestra huella de impacto:</h4>
+                  <h4>Otros proyectos:</h4>
                   <hr />
                   <ul>
                     <li>
@@ -153,31 +153,29 @@ const Navbar = () => {
                 <ul>
                   <li>
                     <Link href={""}>
-                      Apoyar economicamente <RiArrowRightSLine />{" "}
+                      Contribuí con tu aporte <RiArrowRightSLine />{" "}
                     </Link>
                   </li>
                   <li className={s.recursos}>
                     <Link href={""}>
-                      ¿Que mas puedo donar? <RiArrowRightSLine />
+                      ¿Que mas puedo hacer? <RiArrowRightSLine />
                     </Link>
                     <div className={s.flotanteListaDonaciones}>
                       <ul>
+                        <li>Alimentos</li>
                         <li>Ropa</li>
-                        <li>Comida</li>
-                        <li>Libros</li>
-                        <li>Utiles escolares</li>
+                        <li>Muebles</li>
                         <li>Vajilla</li>
                         <li>Juegos</li>
-                        <li>Mantas</li>
                         <li className={s.ultimo}>Y mucho mas...</li>
                       </ul>
                     </div>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={""}>
                       Otras formas de colaborar <RiArrowRightSLine />
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -217,7 +215,7 @@ const Navbar = () => {
                   }}
                 >
                   <li>
-                    <a href="#">CCR</a>
+                    <Link href="/#ccr">CCR</Link>
                   </li>
                   <li>
                     <a href="#">Reciclado PET</a>
@@ -278,28 +276,28 @@ const Navbar = () => {
           <div className={s.expandibleContenido}>
             <div className={s.infoContainer}>
               <div>
-                <h2>Capital humano</h2>
+                <h2>Como trabajamos?</h2>
                 {/* <h4>Equipo</h4> */}
-                <h4>Testimonios de valor</h4>
+                {/* <h4>Testimonios de valor</h4> */}
                 <h4>Nuestros asesores</h4>
-                <h4>Empresas que nos apoyan</h4>
+                {/* <h4>Empresas que nos apoyan</h4> */}
+                <h4>Voluntarios</h4>
               </div>
               <div>
-                <h2>Sobre nosotros</h2>
-                <h4>Linea de tiempo</h4>
-                <h4>Noticias</h4>
-                <h4>Algun item mas</h4>
+                <h2>Comunicacion 360°</h2>
+                <h4>Proyectar en los medios</h4>
+                <h4>Nuestros Newsletters</h4>
               </div>
-              <div>
+              {/* <div>
                 <h2>Colabora</h2>
                 <h4>Hace a tu empresa parte</h4>
                 <h4>Donacion mensual</h4>
-              </div>
+              </div> */}
             </div>
             <div className={s.footer}>
               <div className={s.contacto}>
                 <Link href={""}>
-                  <PiMapPinSimpleLight /> Av. Libertador 1845, Martinez
+                  <PiMapPinSimpleLight /> Marcos Sastre 1031, Tigre
                 </Link>
                 <Link href={""}>
                   <CiMail /> proyectarong@proyectar.com.ar

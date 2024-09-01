@@ -1,5 +1,7 @@
 import React from "react";
 import s from "./SectionAcercaDe.module.scss";
+import { RiArrowDownWideLine } from "react-icons/ri";
+import Link from "next/link";
 
 const SectionAcercaDe = () => {
   return (
@@ -17,6 +19,9 @@ const SectionAcercaDe = () => {
             de <span>ecosistemas amenazados </span> y comunidades vulnerables.
           </p>
           <button>Quiero saber más</button>
+          <Link href={"#impactoEnNumeros"}>
+            <RiArrowDownWideLine size={50} color="#000000da" />
+          </Link>
         </div>
       </div>
     </section>

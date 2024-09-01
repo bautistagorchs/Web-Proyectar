@@ -2,7 +2,6 @@ import React from "react";
 import s from "./SectionNews.module.scss";
 import Link from "next/link";
 import { useState } from "react";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
 import basura_rio from "@/assets/jovenes_basura_rio.jpg";
 import { Noticia } from "@/types/types";
@@ -11,10 +10,11 @@ import basura_costa_rio from "@/assets/basura_costa_rio.jpg";
 import marce from "@/assets/comida_mesa_marce_euge.png";
 import edu_mas_ale from "@/assets/edu_con_ale_foto_frente_comedor_garrote.jpeg";
 import Image from "next/image";
+import { RiArrowLeftWideLine, RiArrowRightWideLine } from "react-icons/ri";
 
 const SectionNews = () => {
-  const [opcion, _setOpcion] = useState(2);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [opcion, _setOpcion] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(1);
 
   const noticias: Noticia[] = [
     {
@@ -86,7 +86,7 @@ const SectionNews = () => {
       <div className={s.contenedorNoticias}>
         {opcion === 1 ? (
           <div className={s.contenidoNoticias}>
-            <h5>Actualizaciones sobre Proyectar</h5>
+            <h5>Proyectar en los medios</h5>
             <h1>Noticias</h1>
             <div className={s.carousel}>
               <div className={s.card}>
@@ -112,10 +112,12 @@ const SectionNews = () => {
               </div>
               <div className={s.controls}>
                 <button onClick={handlePrev} className={s.prevButton}>
-                  <FaArrowLeftLong />
+                  {/* <FaArrowLeftLong color="white" /> */}
+                  <RiArrowLeftWideLine />
                 </button>
                 <button onClick={handleNext} className={s.nextButton}>
-                  <FaArrowRightLong />
+                  {/* <FaArrowRightLong color="white" /> */}
+                  <RiArrowRightWideLine />
                 </button>
               </div>
             </div>
@@ -125,7 +127,7 @@ const SectionNews = () => {
           </div>
         ) : (
           <div className={s.contenidoNoticias}>
-            <h5>Actualizaciones sobre Proyectar</h5>
+            <h5>Proyectar en los medios</h5>
             <h1>Noticias</h1>
             <div className={s.card}>
               <div className={s.contenedorImg}>

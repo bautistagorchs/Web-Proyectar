@@ -8,6 +8,7 @@ import SectionEmpresas from "@/commons/SectionEmpresas/SectionEmpresas";
 import img from "@/assets/niño_parado_espaldas.jpg";
 import Image from "next/image";
 import s from "./landing.module.scss";
+import SectionCounter from "@/commons/SectionCounter/SectionCounter";
 
 export default function Landing() {
   return (
@@ -40,6 +41,7 @@ export default function Landing() {
         </div>
       </main>
       <SectionAcercaDe />
+      <SectionCounter />
       <SectionProjects />
       <SectionNews />
       <SectionEmpresas />
