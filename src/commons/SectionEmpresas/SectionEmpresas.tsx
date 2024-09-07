@@ -17,8 +17,8 @@ const SectionEmpresas = () => {
     <section className={s.empresas} id="empresas">
       <div className={s.contenedorEmpresas}>
         <div className={s.contenidoEmpresas}>
-          <h5>Nos acompañan</h5>
-          <h1>Empresas</h1>
+          <h5>Colaboraciones que transforman y empoderan</h5>
+          <h1>Empresas y fundaciones</h1>
           <div className={s.logos}>
             <Image src={NaranjaX} alt="Logo NaranjaX" />
             <Image src={SistemaB} alt="Logo SistemaB" />

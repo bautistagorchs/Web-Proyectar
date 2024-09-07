@@ -11,7 +11,10 @@ const SectionProjects = () => {
     <section className={s.proyectos} id="proyectos">
       <div>
         <div className={s.contenidoProyectos}>
-          <h1>Nuestros proyectos</h1>
+          <div className={s.headerContainer}>
+            <h5>Ideas en accion</h5>
+            <h1>Proyectos</h1>
+          </div>
           <div className={s.card} id="ccr">
             <div className={s.cardInner}>
               <div className={s.cardFront}>

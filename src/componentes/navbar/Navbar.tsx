@@ -306,7 +306,7 @@ const Navbar = () => {
                 <p>
                   Subscribite al newsletter de <span> Proyectar</span>
                 </p>
-                <MailchimpForm />
+                {/* <MailchimpForm /> */}
               </div>
             </div>
             <div className={s.footer}>
