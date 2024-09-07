@@ -9,3 +9,10 @@ export type Noticia = {
   descripcion: string;
   link: string;
 };
+
+export type SelectedSection = {
+  mision: boolean;
+  vision: boolean;
+  valores: boolean;
+  objetivo: boolean;
+};

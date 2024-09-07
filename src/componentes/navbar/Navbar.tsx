@@ -24,6 +24,7 @@ import { CiFacebook, CiMail } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 import { SlSocialInstagram } from "react-icons/sl";
 import { BsTwitterX } from "react-icons/bs";
+import MailchimpForm from "@/commons/MailchimpForm/MailchimpForm";
 
 const Navbar = () => {
   const initialState = {
@@ -131,12 +132,12 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link href={""}>
-                      Nuestra historia <RiArrowRightSLine />{" "}
+                      Equipo <RiArrowRightSLine />
                     </Link>
                   </li>
                   <li>
                     <Link href={""}>
-                      Equipo <RiArrowRightSLine />
+                      Linea de tiempo <RiArrowRightSLine />{" "}
                     </Link>
                   </li>
                   <li>
@@ -300,11 +301,13 @@ const Navbar = () => {
                 <h4>Proyectar en los medios</h4>
                 <h4>Nuestros Newsletters</h4>
               </div>
-              {/* <div>
-                <h2>Colabora</h2>
-                <h4>Hace a tu empresa parte</h4>
-                <h4>Donacion mensual</h4>
-              </div> */}
+              <div className={s.newsletter} style={{ width: "40%" }}>
+                <h2>Mantenete conectado</h2>
+                <p>
+                  Subscribite al newsletter de <span> Proyectar</span>
+                </p>
+                <MailchimpForm />
+              </div>
             </div>
             <div className={s.footer}>
               <div className={s.contacto}>

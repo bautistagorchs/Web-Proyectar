@@ -15,16 +15,8 @@ export default function Landing() {
     <>
       <main className={s.main}>
         <Image src={img} alt="hsd" className={s.video} />
-        {/* <video autoPlay loop muted className={s.video}>
-          <source
-            src={
-              // "https://drive.google.com/file/d/1Jt8v0wVatOpqU8THYRLBRBgOSpTc5pLR/view?usp=sharing"
-              "https://videos.pexels.com/video-files/6753733/6753733-uhd_2560_1440_30fps.mp4"
-              // "https://videos.pexels.com/video-files/2330708/2330708-uhd_2560_1440_24fps.mp4"
-            }
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
+        {/* <video autoPlay muted loop playsInline className={s.video}>
+          <source src="/videos/video.mp4" type="video/mp4" />
         </video> */}
         <div className={s.mainContent}>
           <div className={s.left}>
