@@ -1,6 +1,6 @@
 "use client";
 
-import CCR from "@/assets/foto_ccr_blended.png";
+import CCR from "@/assets/foto_ccr_blended_los_valientes.png";
 import logo_apaisado from "@/assets/logo_apaisadp_gris_fondo_transparente.png";
 import logoBlanco from "@/assets/logo_blanco_fondo_transparente.png";
 import logoGris from "@/assets/logo_gris_fondo_transparente.png";
