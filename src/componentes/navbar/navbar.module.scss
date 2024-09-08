@@ -672,6 +672,9 @@ $margen-elementos-navbar: 8%;
       margin-top: none;
     }
   }
+  .barraNavegacionTop.navbarScrolled.cambiarBackground {
+    background-color: rgb(58, 58, 58);
+  }
   .barraNavegacionBottom {
     display: none;
   }

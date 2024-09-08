@@ -11,19 +11,19 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineTeam } from "react-icons/ai";
 import { BiDonateHeart } from "react-icons/bi";
+import { BsTwitterX } from "react-icons/bs";
+import { CiFacebook, CiMail } from "react-icons/ci";
+import { FiPhone } from "react-icons/fi";
 import { GoArrowRight, GoHome } from "react-icons/go";
+import { PiLinkedinLogoLight, PiMapPinSimpleLight } from "react-icons/pi";
 import {
   RiArrowDownSLine,
   RiArrowRightSLine,
   RiArrowUpSLine,
 } from "react-icons/ri";
+import { SlSocialInstagram } from "react-icons/sl";
 import { TbWaveSawTool } from "react-icons/tb";
 import s from "./navbar.module.scss";
-import { PiLinkedinLogoLight, PiMapPinSimpleLight } from "react-icons/pi";
-import { CiFacebook, CiMail } from "react-icons/ci";
-import { FiPhone } from "react-icons/fi";
-import { SlSocialInstagram } from "react-icons/sl";
-import { BsTwitterX } from "react-icons/bs";
 import MailchimpForm from "@/commons/MailchimpForm/MailchimpForm";
 
 const Navbar = () => {
@@ -290,10 +290,7 @@ const Navbar = () => {
             <div className={s.infoContainer}>
               <div>
                 <h2>Como trabajamos?</h2>
-                {/* <h4>Equipo</h4> */}
-                {/* <h4>Testimonios de valor</h4> */}
                 <h4>Nuestros asesores</h4>
-                {/* <h4>Empresas que nos apoyan</h4> */}
                 <h4>Voluntarios</h4>
               </div>
               <div>
@@ -306,7 +303,7 @@ const Navbar = () => {
                 <p>
                   Subscribite al newsletter de <span> Proyectar</span>
                 </p>
-                {/* <MailchimpForm /> */}
+                <MailchimpForm />
               </div>
             </div>
             <div className={s.footer}>
