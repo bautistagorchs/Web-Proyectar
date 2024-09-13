@@ -25,7 +25,7 @@ const MailchimpForm = () => {
             </div> */}
             <div className={s.mcFieldGroup}>
               <label htmlFor="mce-EMAIL">
-                Dirección de correo electrónico:
+                Correo electrónico:
                 {/* <span className={s.asterisk}>*</span> */}
               </label>
               <input

@@ -19,14 +19,14 @@
         background-color: transparent;
         outline: none;
         border: none;
-        border-radius: 5px;
+        // border-radius: 5px;
         color: white;
-        padding-left: 10px;
         // background-color: rgb(255, 255, 255);
-        border: 1px solid #ffffffbe;
+        border-bottom: 1px solid #ffffff62;
+        transition: all 0.3s ease;
         &:focus,
         &:active {
-          border: 2px solid #ffff;
+          border-bottom: 1px solid #ffff;
         }
       }
       input.button {

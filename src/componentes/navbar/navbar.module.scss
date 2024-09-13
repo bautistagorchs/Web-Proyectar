@@ -226,6 +226,9 @@ $margen-elementos-navbar: 8%;
           border-bottom: 1px solid white;
         }
       }
+      .newsletter {
+        margin-top: 3%;
+      }
     }
     .footer {
       width: 100%;
@@ -388,16 +391,21 @@ $margen-elementos-navbar: 8%;
       .donar {
         display: flex;
       }
-      color: white;
       margin-top: 2px;
+
+      color: black;
       > div {
         height: unset;
         padding: 10px 15px 17px 15px;
+        a {
+          font-weight: 600;
+        }
       }
       > div:hover {
         background-color: rgb(58, 58, 58);
         > a {
           border-bottom: 1px solid white;
+          color: white;
         }
       }
       .expandir {
@@ -585,9 +593,11 @@ $margen-elementos-navbar: 8%;
         }
       }
       .opcionesDonarContainer {
-        // margin-left: 7%;
         margin-top: -10px;
-        // border: 1px solid orange;
+        margin-right: 10%;
+        > li {
+          text-align: end;
+        }
       }
       .recursos:hover {
         .flotanteListaDonaciones {

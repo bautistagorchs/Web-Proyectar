@@ -2,9 +2,8 @@
 
 import CCR from "@/assets/foto_ccr_blended_los_valientes.png";
 import logo_apaisado from "@/assets/logo_apaisadp_gris_fondo_transparente.png";
-import logoBlanco from "@/assets/logo_blanco_fondo_transparente.png";
+import logo from "@/assets/logo_gris_fondo_transparente.png";
 import logoGris from "@/assets/logo_gris_fondo_transparente.png";
-import reciclaje from "@/assets/proyecto_reciclaje.png";
 import { Spin as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,6 +24,7 @@ import { SlSocialInstagram } from "react-icons/sl";
 import { TbWaveSawTool } from "react-icons/tb";
 import s from "./navbar.module.scss";
 import MailchimpForm from "@/commons/MailchimpForm/MailchimpForm";
+import pet from "@/assets/shutterstock_PET.jpg";
 
 const Navbar = () => {
   const initialState = {
@@ -66,7 +66,7 @@ const Navbar = () => {
               <Image src={logo_apaisado} alt="Logo a color" />
             ) : (
               <Image
-                src={isOpen && window.innerWidth < 900 ? logoGris : logoBlanco}
+                src={isOpen && window.innerWidth < 900 ? logoGris : logo}
                 alt="Logo a color"
               />
             )}
@@ -86,7 +86,7 @@ const Navbar = () => {
                   </button>
                 </div>
                 <div className={s.contenedorImagen}>
-                  <Image src={reciclaje} alt="CCR" />
+                  <Image src={pet} alt="CCR" />
                   <button>
                     <p>
                       Reciclado PET <RiArrowRightSLine />
@@ -98,13 +98,13 @@ const Navbar = () => {
                   <hr />
                   <ul>
                     <li>
+                      <Link href=""> Educación Ambiental</Link>
+                    </li>
+                    <li>
                       <Link href=""> Barrio Limpio</Link>
                     </li>
                     <li>
                       <Link href=""> Biocorredores</Link>
-                    </li>
-                    <li>
-                      <Link href=""> Educacion ambiental</Link>
                     </li>
                     <li className={s.todosLosProyectos}>
                       <Link href="">
@@ -164,9 +164,7 @@ const Navbar = () => {
                   </li>
                   <div className={s.opcionesDonarContainer}>
                     <li className={s.recursos}>
-                      <Link href={""}>
-                        Donar: <RiArrowRightSLine />
-                      </Link>
+                      <Link href={""}>Donar {/*<RiArrowRightSLine />*/}</Link>
                       <div className={s.flotanteListaDonaciones}>
                         <ul>
                           <li>Alimentos</li>
@@ -180,12 +178,12 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link href={""}>
-                        Cocinar viandas <RiArrowRightSLine />
+                        Cocinar viandas {/*<RiArrowRightSLine />*/}
                       </Link>
                     </li>
                     <li>
                       <Link href={""}>
-                        Tejer mantas <RiArrowRightSLine />
+                        Tejer mantas {/*<RiArrowRightSLine />*/}
                       </Link>
                     </li>
                   </div>
@@ -194,7 +192,9 @@ const Navbar = () => {
             </div>
             <div className={s.expandir}>
               <Hamburger
-                color={innerWidth < 900 ? "#444444" : "white"}
+                color={
+                  innerWidth < 900 ? "#444444" : isOpen ? "white" : "black"
+                }
                 rounded
                 distance="sm"
                 size={30}
@@ -298,11 +298,8 @@ const Navbar = () => {
                 <h4>Proyectar en los medios</h4>
                 <h4>Nuestros Newsletters</h4>
               </div>
-              <div className={s.newsletter} style={{ width: "40%" }}>
+              <div className={s.newsletter}>
                 <h2>Mantenete conectado</h2>
-                <p>
-                  Subscribite al newsletter de <span> Proyectar</span>
-                </p>
                 <MailchimpForm />
               </div>
             </div>
@@ -312,7 +309,7 @@ const Navbar = () => {
                   <PiMapPinSimpleLight /> Marcos Sastre 1031, Tigre
                 </Link>
                 <Link href={""}>
-                  <CiMail /> proyectarong@proyectar.com.ar
+                  <CiMail /> contacto@proyectarong.ar
                 </Link>
                 <Link href={""}>
                   {" "}
