@@ -219,6 +219,7 @@ $margen-elementos-navbar: 8%;
         padding: 5px 0;
         font-weight: 400;
         font-weight: 20px;
+        text-align: center;
         border-bottom: 1px solid transparent;
         transition: all 0.4s ease;
         &:hover {
@@ -284,6 +285,7 @@ $margen-elementos-navbar: 8%;
           }
         }
       }
+      // este before es de la navbar expandible. separacion con el "footer"
       &::before {
         content: "";
         position: absolute;
@@ -315,7 +317,7 @@ $margen-elementos-navbar: 8%;
           rgba(255, 255, 255, 0.49) 50%,
           rgba(255, 255, 255, 0.5) 51%,
           rgba(255, 255, 255, 0.5) 76%,
-          rgba(255, 255, 255, 0) 100%
+          rgba(177, 11, 11, 0) 100%
         );
       }
     }
@@ -365,6 +367,7 @@ $margen-elementos-navbar: 8%;
 
 @media (min-width: 900px) {
   .barraNavegacionTop.cambiarBackground {
+    // este background es para cuando se abre la hamburguesa
     background-color: rgb(58, 58, 58);
     .elementosNavegacion {
       color: white;
@@ -372,8 +375,9 @@ $margen-elementos-navbar: 8%;
   }
   .barraNavegacionTop {
     height: $altura-top-navbar-laptop;
+    // position: relative;
     backdrop-filter: blur(7px);
-    background-color: rgba(58, 58, 58, 0.37);
+    background-color: rgba(255, 255, 255, 0.726);
     .contenidoBarra {
       width: 100%;
       flex-direction: column;
@@ -381,6 +385,7 @@ $margen-elementos-navbar: 8%;
     }
     .logo {
       width: 170px;
+      // filter: drop-shadow(0 0px 10px rgba(0, 0, 0, 0.781));
     }
     .logo:hover {
       cursor: pointer;
@@ -593,10 +598,14 @@ $margen-elementos-navbar: 8%;
         }
       }
       .opcionesDonarContainer {
-        margin-top: -10px;
-        margin-right: 10%;
+        // margin-top: -10px;
+        margin-left: 5px;
+        line-height: 2.1rem;
         > li {
-          text-align: end;
+          text-align: start;
+          a {
+            font-size: 16px;
+          }
         }
       }
       .recursos:hover {
@@ -676,14 +685,20 @@ $margen-elementos-navbar: 8%;
   }
   .barraNavegacionTop.navbarScrolled {
     height: $altura-top-navbar-laptop;
-    background-color: inherit;
+    // background-color: inherit;
+    background-color: rgba(255, 255, 255, 0.616);
+    // img {
+    //   display: none;
+    // }
     box-shadow: unset;
     .contenidoBarra {
       margin-top: none;
     }
   }
   .barraNavegacionTop.navbarScrolled.cambiarBackground {
+    // este background es para cuadno esta scrolleado y se abre la hambuerguesa
     background-color: rgb(58, 58, 58);
+    // background-color: rgba(255, 255, 255, 0.616);
   }
   .barraNavegacionBottom {
     display: none;

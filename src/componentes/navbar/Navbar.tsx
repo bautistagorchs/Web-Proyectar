@@ -2,8 +2,8 @@
 
 import CCR from "@/assets/foto_ccr_blended_los_valientes.png";
 import logo_apaisado from "@/assets/logo_apaisadp_gris_fondo_transparente.png";
-import logo from "@/assets/logo_gris_fondo_transparente.png";
 import logoGris from "@/assets/logo_gris_fondo_transparente.png";
+import logoBlanco from "@/assets/logo_blanco_fondo_transparente.png";
 import { Spin as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,7 +23,6 @@ import {
 import { SlSocialInstagram } from "react-icons/sl";
 import { TbWaveSawTool } from "react-icons/tb";
 import s from "./navbar.module.scss";
-import MailchimpForm from "@/commons/MailchimpForm/MailchimpForm";
 import pet from "@/assets/shutterstock_PET.jpg";
 
 const Navbar = () => {
@@ -62,11 +61,13 @@ const Navbar = () => {
       >
         <div className={s.contenidoBarra}>
           <div className={s.logo}>
-            {scrollY > 10 && window.innerWidth < 900 ? (
+            {scrollY > 10 && innerWidth < 900 ? (
               <Image src={logo_apaisado} alt="Logo a color" />
             ) : (
               <Image
-                src={isOpen && window.innerWidth < 900 ? logoGris : logo}
+                src={
+                  innerWidth < 900 ? logoGris : isOpen ? logoBlanco : logoGris
+                }
                 alt="Logo a color"
               />
             )}
@@ -159,12 +160,14 @@ const Navbar = () => {
                       Contribuí con tu aporte <RiArrowRightSLine />{" "}
                     </Link>
                   </li>
-                  <li className={s.segundoItemDonar}>
-                    ¿Que mas puedo hacer? <RiArrowDownSLine />
+                  <li /*className={s.segundoItemDonar}*/>
+                    <Link href={""}>
+                      ¿Que mas puedo hacer? <RiArrowDownSLine />
+                    </Link>
                   </li>
                   <div className={s.opcionesDonarContainer}>
                     <li className={s.recursos}>
-                      <Link href={""}>Donar {/*<RiArrowRightSLine />*/}</Link>
+                      <Link href={""}>- Donar {/*<RiArrowRightSLine />*/}</Link>
                       <div className={s.flotanteListaDonaciones}>
                         <ul>
                           <li>Alimentos</li>
@@ -178,12 +181,12 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link href={""}>
-                        Cocinar viandas {/*<RiArrowRightSLine />*/}
+                        - Cocinar viandas {/*<RiArrowRightSLine />*/}
                       </Link>
                     </li>
                     <li>
                       <Link href={""}>
-                        Tejer mantas {/*<RiArrowRightSLine />*/}
+                        - Tejer mantas {/*<RiArrowRightSLine />*/}
                       </Link>
                     </li>
                   </div>
@@ -290,17 +293,17 @@ const Navbar = () => {
             <div className={s.infoContainer}>
               <div>
                 <h2>Como trabajamos?</h2>
-                <h4>Nuestros asesores</h4>
-                <h4>Voluntarios</h4>
+                <h4 style={{ textAlign: "start" }}>Nuestros asesores</h4>
+                <h4 style={{ textAlign: "start" }}>Voluntarios</h4>
               </div>
               <div>
                 <h2>Comunicacion 360°</h2>
-                <h4>Proyectar en los medios</h4>
-                <h4>Nuestros Newsletters</h4>
+                <h4 style={{ textAlign: "end" }}>Proyectar en los medios</h4>
+                <h4 style={{ textAlign: "end" }}>Nuestros Newsletters</h4>
               </div>
               <div className={s.newsletter}>
-                <h2>Mantenete conectado</h2>
-                <MailchimpForm />
+                <h2 style={{ textAlign: "center" }}>Newsletter</h2>
+                {/* <MailchimpForm /> */}
               </div>
             </div>
             <div className={s.footer}>

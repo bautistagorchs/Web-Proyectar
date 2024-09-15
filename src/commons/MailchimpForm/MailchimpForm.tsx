@@ -24,10 +24,6 @@ const MailchimpForm = () => {
               <span className={s.asterisk}>*</span> campo requerido
             </div> */}
             <div className={s.mcFieldGroup}>
-              <label htmlFor="mce-EMAIL">
-                Correo electrónico:
-                {/* <span className={s.asterisk}>*</span> */}
-              </label>
               <input
                 type="email"
                 name="EMAIL"

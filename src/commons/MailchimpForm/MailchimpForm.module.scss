@@ -28,6 +28,9 @@
         &:active {
           border-bottom: 1px solid #ffff;
         }
+        &::placeholder {
+          text-align: center;
+        }
       }
       input.button {
         height: 35px;

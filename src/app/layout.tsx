@@ -1,5 +1,5 @@
 import Navbar from "@/componentes/navbar/Navbar";
-import { poppins } from "@/fuentes/fuentes";
+import { code, open_sans, poppins, roboto } from "@/fuentes/fuentes";
 import type { Metadata } from "next";
 import "./globals.css";
 // import Footer from "@/componentes/footer/Footer";
@@ -23,7 +23,7 @@ export default function RootLayout({
           sizes="any"
         />
       </head>
-      <body className={poppins.className}>
+      <body className={open_sans.className}>
         <Navbar />
         {children}
         {/* <Footer /> */}

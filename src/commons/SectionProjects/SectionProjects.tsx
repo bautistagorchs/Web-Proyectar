@@ -12,8 +12,8 @@ const SectionProjects = () => {
       <div>
         <div className={s.contenidoProyectos}>
           <div className={s.headerContainer}>
-            <h5>Transformando ideas en accion</h5>
             <h1>Proyectos</h1>
+            <h5>Nuestras ideas en accion</h5>
           </div>
           <div className={s.cardsContainer}>
             <div className={s.card} id="ccr">
@@ -48,7 +48,7 @@ const SectionProjects = () => {
                     <RiArrowDownWideLine color="white" size={30} />
                   </div>
                   <div className={s.infoContainer}>
-                    <h3>Reciclado PET</h3>
+                    <h3>Campaña PET</h3>
                     <p>
                       La Campaña PET se enfoca en la recolección de botellas de
                       plástico PET1 para su reciclaje. Involucra a los barrios

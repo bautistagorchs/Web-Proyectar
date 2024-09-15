@@ -2,9 +2,15 @@
 
 .contenedor {
   width: 100%;
-  min-height: 80vh;
-  padding-top: 20vh;
-  background: linear-gradient(#0b576b, #07516e);
+  // min-height: 80vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+
+  // background: #808080;
+  // background-color: #2f4f4f;
+  // background-color: #708090;
+  background-color: #095256;
+
   scroll-margin-top: calc($altura-top-navbar-scrolled + 10vh);
 }
 
@@ -31,12 +37,13 @@
       text-align: center;
       color: white;
       font-size: 27px;
-      -webkit-text-stroke-width: 0.5px;
-      -webkit-text-stroke-color: rgba(0, 140, 255, 0.74);
+      // -webkit-text-stroke-width: 0.5px;
+      // -webkit-text-stroke-color: rgba(0, 140, 255, 0.74);
     }
 
     .boxesContainer {
       width: 100%;
+      margin-top: 2rem;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -80,8 +87,8 @@
         }
         h6 {
           font-size: 12px;
-          color: rgb(125 229 195);
-          // color: tan;
+          // color: rgb(125 229 195);
+          color: black;
         }
       }
     }
@@ -105,14 +112,18 @@
 
 @media (min-width: 900px) {
   .contenedor {
-    padding-top: 10vh;
-
     .contenido {
+      padding-top: 10vh;
+      animation: appearLeft linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
       h5 {
+        color: black;
         margin-top: 0;
         font-size: 15px;
       }
       h1 {
+        color: black;
         font-size: 34px;
         margin-bottom: 25px;
         &::after {
@@ -123,19 +134,55 @@
       .boxesContainer {
         width: 100%;
         padding-top: 5vh;
+        padding-bottom: 20vh;
         .box {
-          max-width: 280px;
+          height: 140px;
+          max-width: 250px;
+
+          > div {
+            justify-content: flex-end;
+          }
           .p span {
-            font-size: 40px;
+            font-size: 30px;
           }
           h6 {
+            color: black;
             font-size: 16px;
           }
         }
       }
       .arrowNextSection {
         margin-top: 130px;
+        display: none;
       }
+    }
+  }
+  .custom_shape_divider_bottom_1726352060 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+      position: relative;
+      display: block;
+      width: calc(162% + 1.3px);
+      height: 160px;
+    }
+    .shape_fill {
+      fill: #ffffff;
+    }
+  }
+  @keyframes appearLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
     }
   }
 }
