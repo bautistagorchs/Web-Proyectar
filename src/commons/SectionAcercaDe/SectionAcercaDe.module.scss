@@ -1,5 +1,4 @@
 @import "../../app/globals.scss";
-// $main-color: Tan;
 $main-color: black;
 $main-color-light: rgb(235, 205, 165);
 
@@ -100,7 +99,7 @@ section.acercaDe {
 
       animation: opacity linear;
       animation-timeline: view();
-      animation-range: entry 0% cover 30%;
+      animation-range: entry 0% cover 40%;
       .central {
         margin-top: 2rem;
         flex-direction: column;

@@ -4,18 +4,20 @@
 // import basura_rio from "@/assets/jovenes_basura_rio.jpg";
 import reconquista from "@/assets/noticia_reconquista_vecinos_abrazo.jpg";
 import { Noticia } from "@/types/types";
+import basura_pexels from "@/assets/pexels_basura_rio.jpg";
+import alarma_reconquista from "@/assets/pexels_alarma_reconquista.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
 import { RiArrowLeftWideLine, RiArrowRightWideLine } from "react-icons/ri";
 import s from "./SectionNews.module.scss";
-import noticia_plan_saneamiento from "@/assets/noticia_reconquista_plan_saneamiento.jpg";
+// import noticia_plan_saneamiento from "@/assets/noticia_reconquista_plan_saneamiento.jpg";
 import coperativa_noticia from "@/assets/coperativa.jpg";
-import reconquista_noticia from "@/assets/rio-reconquista.jpg";
+// import reconquista_noticia from "@/assets/rio-reconquista.jpg";
 
 const SectionNews = () => {
-  const [opcion, _setOpcion] = useState(2);
+  const [opcion, _setOpcion] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(1);
 
   const noticias: Noticia[] = [
@@ -30,7 +32,7 @@ const SectionNews = () => {
       link: "https://www.lanacion.com.ar/buenos-aires/la-planta-basura-ideada-vecinos-busca-ser-nid2250483/",
     },
     {
-      imgSrc: noticia_plan_saneamiento,
+      imgSrc: basura_pexels,
       imgAlt: "Imagen notica proyectar rio",
       titulo: "Avanza el plan de saneamiento",
       autor: "La Nacion",
@@ -40,7 +42,7 @@ const SectionNews = () => {
       link: "https://www.lanacion.com.ar/buenos-aires/avanza-plan-integral-saneamiento-rio-reconquista-nid2082853/",
     },
     {
-      imgSrc: reconquista_noticia,
+      imgSrc: alarma_reconquista,
       imgAlt: "Imagen notica proyectar rio",
       titulo: "Alarma en el Reconquista:",
       autor: "La Nacion",
@@ -127,8 +129,8 @@ const SectionNews = () => {
       <div className={s.contenedorNoticias}>
         {opcion === 1 ? (
           <div className={s.contenidoNoticias}>
-            <h5>Proyectar en los medios</h5>
             <h1>Noticias</h1>
+            <h5>Proyectar en los medios</h5>
             <div className={s.carousel}>
               <div className={s.card}>
                 <div className={s.contenedorImg}>
@@ -136,20 +138,21 @@ const SectionNews = () => {
                     src={noticias[currentIndex].imgSrc}
                     alt={noticias[currentIndex].imgAlt}
                   />
-                  <h3>{noticias[currentIndex].titulo}</h3>
                 </div>
-                <h6>
-                  por {noticias[currentIndex].autor} -{" "}
-                  {noticias[currentIndex].fecha}
-                </h6>
-                <p>{noticias[currentIndex].descripcion}</p>
-                <Link href={noticias[currentIndex].link} target="_blank">
-                  <button className={s.leerMas}>
-                    {/* <p>Noticia completa</p> */}
-                    <p>{textTrimed(noticias[currentIndex].autor)}.com</p>
-                    <HiMiniArrowTopRightOnSquare color="white" size={15} />
-                  </button>
-                </Link>
+                <div className={s.contenido}>
+                  <h3>{noticias[currentIndex].titulo}</h3>
+                  <h6>
+                    por {noticias[currentIndex].autor} -{" "}
+                    {noticias[currentIndex].fecha}
+                  </h6>
+                  <p>{noticias[currentIndex].descripcion}</p>
+                  <Link href={noticias[currentIndex].link} target="_blank">
+                    <button className={s.leerMas}>
+                      <p>{textTrimed(noticias[currentIndex].autor)}</p>
+                      <HiMiniArrowTopRightOnSquare color="black" size={15} />
+                    </button>
+                  </Link>
+                </div>
               </div>
               <div className={s.controls}>
                 <button onClick={handlePrev} className={s.prevButton}>
