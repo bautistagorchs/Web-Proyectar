@@ -41,15 +41,15 @@ const SectionProjects = () => {
             </div>
             <div className={s.card}>
               <div className={s.cardInner}>
-                <div className={s.cardFront}>
-                  <div className={s.contenedorImagen} id={s.mobile}>
+                <div className={s.cardFront} id={s.segundo}>
+                  <div className={s.contenedorImagen}>
                     <Image src={pet} alt="ccr" />
                     <h3>Reciclado PET</h3>
                     <RiArrowDownWideLine color="white" size={30} />
                   </div>
                   <div className={s.infoContainer}>
                     <h3>Campaña PET</h3>
-                    <p>
+                    <p id={s.mergenIzq}>
                       La Campaña PET se enfoca en la recolección de botellas de
                       plástico PET1 para su reciclaje. Involucra a los barrios
                       carenciados, empresas, instituciones educativas y
@@ -60,11 +60,11 @@ const SectionProjects = () => {
                     </p>
                     <button>Saber más</button>
                   </div>
-                  <div className={s.contenedorImagen} id={s.laptop}>
+                  {/* <div className={s.contenedorImagen} id={s.laptop}>
                     <Image src={pet} alt="ccr" />
                     <h3>Reciclado PET</h3>
                     <RiArrowDownWideLine color="white" size={30} />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
