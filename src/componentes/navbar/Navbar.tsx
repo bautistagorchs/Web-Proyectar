@@ -55,8 +55,8 @@ const Navbar = () => {
       fill="none"
       stroke="currentColor"
       strokeWidth="1.25"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-chevron-right"
     >
       <path d="m9 18 6-6-6-6" />
@@ -72,8 +72,8 @@ const Navbar = () => {
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-chevron-up"
     >
       <path d="m18 15-6-6-6 6" />
@@ -88,8 +88,8 @@ const Navbar = () => {
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-chevron-down"
     >
       <path d="m6 9 6 6 6-6" />
@@ -128,8 +128,8 @@ const Navbar = () => {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-package"
                 >
                   <path d="m7.5 4.27 9 5.15" />
@@ -177,8 +177,8 @@ const Navbar = () => {
                             fill="none"
                             stroke="currentColor"
                             strokeWidth="1.25"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="lucide lucide-arrow-right"
                           >
                             <path d="M5 12h14" />
@@ -202,8 +202,8 @@ const Navbar = () => {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-users"
                 >
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -242,8 +242,8 @@ const Navbar = () => {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-hand-heart"
                 >
                   <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" />
@@ -326,8 +326,8 @@ const Navbar = () => {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="lucide lucide-chevron-down"
                     >
                       <path d="m6 9 6 6 6-6" />
@@ -421,8 +421,8 @@ const Navbar = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="lucide lucide-map-pin"
                   >
                     <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
@@ -439,8 +439,8 @@ const Navbar = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="lucide lucide-mail"
                   >
                     <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -458,8 +458,8 @@ const Navbar = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="lucide lucide-phone"
                   >
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -479,8 +479,8 @@ const Navbar = () => {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="lucide lucide-instagram"
                     >
                       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -497,8 +497,8 @@ const Navbar = () => {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="lucide lucide-facebook"
                     >
                       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -513,8 +513,8 @@ const Navbar = () => {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="lucide lucide-linkedin"
                     >
                       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -531,8 +531,8 @@ const Navbar = () => {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="lucide lucide-twitter"
                     >
                       <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />

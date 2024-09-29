@@ -1,0 +1,123 @@
+div.contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(58, 58, 58);
+}
+.contenido {
+  width: 90%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  color: white;
+}
+.divFooter {
+  width: 100%;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.agradecimientos {
+  margin-top: 15px;
+  h3 {
+    font-weight: 600;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 15px;
+  }
+}
+.contacto {
+  margin-top: 15px;
+  line-height: 2rem;
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+    &:hover {
+      cursor: pointer;
+      border-bottom: 1px solid white;
+    }
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
+.iconos {
+  margin-top: 1rem;
+  gap: 1rem;
+  h4 {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    a {
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s ease;
+      // &:hover {
+      //   transform: scale(1.5) translateY(-4px);
+      // }
+    }
+  }
+}
+.menu {
+  margin-top: 25px;
+  gap: 1rem;
+  button {
+    all: unset;
+    width: fit-content;
+    padding: 7px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 12px;
+    border: 1px solid white;
+  }
+}
+
+@media (min-width: 900px) {
+  .divFooter {
+    flex-direction: row;
+
+    .contactoContainer {
+      flex-direction: column-reverse;
+    }
+    > div {
+      justify-content: center;
+    }
+    .iconos {
+      div a {
+        &:hover {
+          cursor: pointer;
+
+          transform: scale(1.3);
+        }
+      }
+    }
+    .menu {
+      button {
+        transition: all 0.3s ease;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.2) translateY(-4px);
+        }
+      }
+    }
+  }
+}
