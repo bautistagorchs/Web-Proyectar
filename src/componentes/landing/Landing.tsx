@@ -5,8 +5,8 @@ import SectionProjects from "@/commons/SectionProjects/SectionProjects";
 import SectionNews from "@/commons/SectionNews/SectionNews";
 import SectionAcercaDe from "@/commons/SectionAcercaDe/SectionAcercaDe";
 import SectionEmpresas from "@/commons/SectionEmpresas/SectionEmpresas";
-import img from "@/assets/edu_con_ale_foto_frente_comedor_garrote.jpeg";
-import Image from "next/image";
+// import img from "@/assets/edu_con_ale_foto_frente_comedor_garrote.jpeg";
+// import Image from "next/image";
 import s from "./Landing.module.scss";
 import SectionMap from "@/commons/SectionMap/SectionMap";
 import SectionCounter from "@/commons/SectionCounter/SectionCounter";
@@ -15,10 +15,10 @@ export default function Landing() {
   return (
     <>
       <main className={s.main}>
-        <Image src={img} alt="hsd" className={s.video} />
-        {/* <video autoPlay muted loop playsInline className={s.video}>
-          <source src="/videos/video.mp4" type="video/mp4" />
-        </video> */}
+        {/* <Image src={img} alt="hsd" className={s.video} /> */}
+        <video autoPlay muted loop playsInline className={s.video}>
+          <source src="/videos/video1.mp4" type="video/mp4" />
+        </video>
         <div className={s.hero}>
           <div className={s.headers}>
             <h1>

@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import s from "./SectionAcercaDe.module.scss";
 import Link from "next/link";
 
 const SectionAcercaDe = () => {
+  const contenidoRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(s.isVisible); // Agrega la clase cuando es visible
+          }
+        });
+      },
+      { threshold: 0.9 } // El umbral es el porcentaje de visibilidad requerido para activar la animación
+    );
+
+    if (contenidoRef.current) {
+      observer.observe(contenidoRef.current);
+    }
+
+    return () => {
+      if (contenidoRef.current) {
+        observer.unobserve(contenidoRef.current);
+      }
+    };
+  }, []);
   return (
     <section className={s.acercaDe}>
       <div className={s.contenedorContenido}>
-        <div className={s.contenidoAcercaDe}>
+        <div className={s.contenidoAcercaDe} ref={contenidoRef}>
           <div className={s.central}>
             <h1>Nuestro propósito</h1>
             <p>

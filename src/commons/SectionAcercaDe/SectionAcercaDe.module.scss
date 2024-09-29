@@ -99,9 +99,19 @@ section.acercaDe {
       flex-direction: row;
       justify-content: center;
 
-      animation: opacity linear;
-      animation-timeline: view();
-      animation-range: entry 0% cover 40%;
+      opacity: 0;
+      transform: scale(0.6);
+
+      transition: opacity 0.8s ease, transform 0.8s ease;
+
+      // animation: opacity linear;
+      // animation-timeline: view();
+      // animation-range: entry 0% cover 40%;
+      &.isVisible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
       .central {
         margin-top: 2rem;
         flex-direction: column;
@@ -137,15 +147,25 @@ section.acercaDe {
         }
       }
     }
+    // @keyframes opacity {
+    //   0% {
+    //     opacity: 0;
+    //     scale: 0.6;
+    //   }
+
+    //   100% {
+    //     scale: 1;
+    //     opacity: 1;
+    //   }
+    // }
     @keyframes opacity {
       0% {
         opacity: 0;
         scale: 0.6;
       }
-
       100% {
-        scale: 1;
         opacity: 1;
+        scale: 1;
       }
     }
   }
