@@ -5,19 +5,20 @@ import SectionProjects from "@/commons/SectionProjects/SectionProjects";
 import SectionNews from "@/commons/SectionNews/SectionNews";
 import SectionAcercaDe from "@/commons/SectionAcercaDe/SectionAcercaDe";
 import SectionEmpresas from "@/commons/SectionEmpresas/SectionEmpresas";
-// import img from "@/assets/niño_parado_espaldas.jpg";
-// import Image from "next/image";
-import s from "./landing.module.scss";
-import SectionCounter from "@/commons/SectionCounter/SectionCounter";
+import img from "@/assets/edu_con_ale_foto_frente_comedor_garrote.jpeg";
+import Image from "next/image";
+import s from "./Landing.module.scss";
+import SectionMap from "@/commons/SectionMap/SectionMap";
+// import SectionCounter from "@/commons/SectionCounter/SectionCounter";
 
 export default function Landing() {
   return (
     <>
       <main className={s.main}>
-        {/* <Image src={img} alt="hsd" className={s.video} /> */}
-        <video autoPlay muted loop playsInline className={s.video}>
+        <Image src={img} alt="hsd" className={s.video} />
+        {/* <video autoPlay muted loop playsInline className={s.video}>
           <source src="/videos/video.mp4" type="video/mp4" />
-        </video>
+        </video> */}
         <div className={s.hero}>
           <div className={s.headers}>
             <h1>
@@ -30,10 +31,11 @@ export default function Landing() {
         </div>
       </main>
       <SectionAcercaDe />
-      <SectionCounter />
+      {/* <SectionCounter /> */}
       <SectionProjects />
       <SectionNews />
       <SectionEmpresas />
+      <SectionMap />
     </>
   );
 }
