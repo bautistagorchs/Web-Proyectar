@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./SectionAcercaDe.module.scss";
-import { RiArrowDownWideLine } from "react-icons/ri";
 import Link from "next/link";
 
 const SectionAcercaDe = () => {
@@ -18,7 +17,20 @@ const SectionAcercaDe = () => {
             </p>
             <button>Nuestras propuestas</button>
             <Link href={"#impactoEnNumeros"}>
-              <RiArrowDownWideLine size={50} color="#000000da" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="70"
+                height="70"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-chevron-down"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </Link>
           </div>
         </div>

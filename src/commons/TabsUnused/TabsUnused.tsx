@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { SelectedSection } from "@/types/types";
-import { FaHandsHelping, FaLeaf, FaRecycle, FaTree } from "react-icons/fa";
-import { FaArrowUpRightDots } from "react-icons/fa6";
-import { MdOutlineNaturePeople } from "react-icons/md";
-import { PiPlant } from "react-icons/pi";
+// import { FaHandsHelping, FaLeaf, FaRecycle, FaTree } from "react-icons/fa";
+// import { FaArrowUpRightDots } from "react-icons/fa6";
+// import { MdOutlineNaturePeople } from "react-icons/md";
+// import { PiPlant } from "react-icons/pi";
 import s from "./TabsUnused.module.scss";
 
 const TabsUnused = () => {
@@ -57,14 +57,14 @@ const TabsUnused = () => {
       >
         <ul>
           <li>
-            <FaTree color="Tan" size={25} />
+            {/* <FaTree color="Tan" size={25} /> */}
             <div>
               <span>Restaurar Ecosistemas:</span> Trabajar en proyectos que
               revitalicen la biodiversidad.
             </div>
           </li>
           <li>
-            <FaHandsHelping color="Tan" size={25} />
+            {/* <FaHandsHelping color="Tan" size={25} /> */}
 
             <div>
               <span>Apoyar Comunidades: </span>Colaborar para mejorar la calidad
@@ -72,7 +72,7 @@ const TabsUnused = () => {
             </div>
           </li>
           <li>
-            <FaLeaf color="Tan" size={25} />
+            {/* <FaLeaf color="Tan" size={25} /> */}
             <div>
               <span>Promover la Educación Ambiental:</span>
               Crear conciencia y educar sobre la importancia del cuidado del
@@ -80,7 +80,7 @@ const TabsUnused = () => {
             </div>
           </li>
           <li>
-            <FaRecycle color="Tan" size={25} />
+            {/* <FaRecycle color="Tan" size={25} /> */}
             <div>
               <span>Reducir la Huella Ecológica:</span>
               Implementar prácticas sostenibles para minimizar el impacto
@@ -96,14 +96,14 @@ const TabsUnused = () => {
       >
         <ul>
           <li>
-            <FaRecycle color="Tan" size={25} />
+            {/* <FaRecycle color="Tan" size={25} /> */}
             <div>
               <span>Futuro Sostenible:</span> Un mundo con ecosistemas
               recuperados y saludables.
             </div>
           </li>
           <li>
-            <FaArrowUpRightDots color="Tan" size={25} />
+            {/* <FaArrowUpRightDots color="Tan" size={25} /> */}
 
             <div>
               <span>Empoderamiento: </span>Comunidades vulnerables con las
@@ -111,14 +111,14 @@ const TabsUnused = () => {
             </div>
           </li>
           <li>
-            <MdOutlineNaturePeople color="Tan" size={25} />
+            {/* <MdOutlineNaturePeople color="Tan" size={25} /> */}
             <div>
               <span>Conciencia Ambiental:</span>
               Una sociedad que prioriza la sostenibilidad.
             </div>
           </li>
           <li>
-            <PiPlant color="Tan" size={25} />
+            {/* <PiPlant color="Tan" size={25} /> */}
             <div>
               <span>Innovación Verde:</span>
               Tecnología al servicio de soluciones ambientales.

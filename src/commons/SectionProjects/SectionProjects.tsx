@@ -4,9 +4,24 @@ import pet from "@/assets/foto_pet_bruno.jpg";
 import barrioLimpio from "@/assets/foto_casa_euge_pet.jpg";
 import ccr from "@/assets/foto_ccr_blended_frente.jpg";
 import s from "./SectionProjects.module.scss";
-import { RiArrowDownWideLine } from "react-icons/ri";
 
 const SectionProjects = () => {
+  const arrowDownSline = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="white"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-chevron-down"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
   return (
     <section className={s.proyectos} id="proyectos">
       <div>
@@ -22,7 +37,7 @@ const SectionProjects = () => {
                   <div className={s.contenedorImagen}>
                     <Image src={ccr} alt="ccr" />
                     <h3>Centro Comunitario Resiliente</h3>
-                    <RiArrowDownWideLine color="white" size={30} />
+                    {arrowDownSline}
                   </div>
                   <div className={s.infoContainer}>
                     <h3>Centro Comunitario Resiliente</h3>
@@ -45,7 +60,7 @@ const SectionProjects = () => {
                   <div className={s.contenedorImagen}>
                     <Image src={pet} alt="ccr" />
                     <h3>Reciclado PET</h3>
-                    <RiArrowDownWideLine color="white" size={30} />
+                    {arrowDownSline}
                   </div>
                   <div className={s.infoContainer}>
                     <h3>Campaña PET</h3>
@@ -69,7 +84,7 @@ const SectionProjects = () => {
                   <div className={s.contenedorImagen}>
                     <Image src={barrioLimpio} alt="ccr" />
                     <h3>Barrio Limpio</h3>
-                    <RiArrowDownWideLine color="white" size={30} />
+                    {arrowDownSline}
                   </div>
                   <div className={s.infoContainer}>
                     <h3>Barrio Limpio</h3>

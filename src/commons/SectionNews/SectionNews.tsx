@@ -3,11 +3,6 @@ import { Noticia } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef } from "react";
-import {
-  HiArrowLeft,
-  HiArrowRight,
-  HiMiniArrowTopRightOnSquare,
-} from "react-icons/hi2";
 import s from "./SectionNews.module.scss";
 import basura_rio from "@/assets/jovenes_basura_rio.jpg";
 import imagen1 from "@/assets/imagen1.jpg";
@@ -166,7 +161,22 @@ const SectionNews = () => {
                     <Link href={noticia.link} target="_blank">
                       <button className={s.leerMas}>
                         <p>{textTrimed(noticia.autor)}</p>
-                        <HiMiniArrowTopRightOnSquare color="black" size={15} />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="13"
+                          height="13"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-square-arrow-out-up-right"
+                        >
+                          <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
+                          <path d="m21 3-9 9" />
+                          <path d="M15 3h6v6" />
+                        </svg>
                       </button>
                     </Link>
                   </div>
@@ -175,10 +185,38 @@ const SectionNews = () => {
             </div>
             <div className={s.controls}>
               <button onClick={handlePrev} className={s.prevButton}>
-                <HiArrowLeft color="white" size={30} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37"
+                  height="37"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-arrow-left"
+                >
+                  <path d="m12 19-7-7 7-7" />
+                  <path d="M19 12H5" />
+                </svg>
               </button>
               <button onClick={handleNext} className={s.nextButton}>
-                <HiArrowRight color="white" size={30} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37"
+                  height="37"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-arrow-right"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
               </button>
             </div>
           </div>

@@ -45,6 +45,7 @@ section.acercaDe {
       flex-direction: inherit;
       align-items: inherit;
       gap: 2rem;
+      padding-bottom: 10vh;
     }
     h1 {
       color: $color-dark;
@@ -75,7 +76,8 @@ section.acercaDe {
       }
     }
     a > svg {
-      margin-top: 7vh;
+      margin-top: 5vh;
+      // padding-bottom: 10vh;
     }
   }
 }
