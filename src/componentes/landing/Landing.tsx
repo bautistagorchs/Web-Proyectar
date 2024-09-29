@@ -9,7 +9,7 @@ import img from "@/assets/edu_con_ale_foto_frente_comedor_garrote.jpeg";
 import Image from "next/image";
 import s from "./Landing.module.scss";
 import SectionMap from "@/commons/SectionMap/SectionMap";
-// import SectionCounter from "@/commons/SectionCounter/SectionCounter";
+import SectionCounter from "@/commons/SectionCounter/SectionCounter";
 
 export default function Landing() {
   return (
@@ -31,7 +31,7 @@ export default function Landing() {
         </div>
       </main>
       <SectionAcercaDe />
-      {/* <SectionCounter /> */}
+      <SectionCounter />
       <SectionProjects />
       <SectionNews />
       <SectionEmpresas />

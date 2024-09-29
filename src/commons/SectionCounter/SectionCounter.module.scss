@@ -77,7 +77,6 @@
         justify-content: space-between;
         .p {
           width: 100%;
-
           display: inherit;
           flex-direction: inherit;
           justify-content: inherit;
@@ -136,16 +135,21 @@
         padding-top: 5vh;
         padding-bottom: 20vh;
         .box {
-          height: 140px;
+          height: 160px;
           max-width: 250px;
 
           > div {
             justify-content: flex-end;
           }
           .p span {
-            font-size: 30px;
+            font-size: 35px;
           }
           h6 {
+            margin-top: 5px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            min-height: 44px;
             color: black;
             font-size: 16px;
           }
