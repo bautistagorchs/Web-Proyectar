@@ -16,3 +16,8 @@ export type SelectedSection = {
   valores: boolean;
   objetivo: boolean;
 };
+
+export interface HeaderSubPaginasProps {
+  title: string;
+  img: StaticImageData;
+}

@@ -1,11 +1,9 @@
-@import "../../app/globals.scss";
-
 .contenedor {
   width: 100%;
   padding-top: 10vh;
   padding-bottom: 10vh;
   background-color: #095256;
-  scroll-margin-top: calc($altura-top-navbar-scrolled + 10vh);
+  scroll-margin-top: calc(10vh + 10vh);
 }
 
 .contenedor {

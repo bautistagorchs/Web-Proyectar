@@ -1,4 +1,7 @@
-@import "../../app/globals.scss";
+$altura-top-navbar: 13vh;
+$altura-top-navbar-laptop: 170px;
+$altura-top-navbar-scrolled: 10vh;
+$altura-bottom-navbar: 10vh;
 
 $altura-divFlotante: 30vh;
 $ancho-divFlotante: calc(100% - 8% * 2);
@@ -115,7 +118,7 @@ $margen-elementos-navbar: 8%;
         color: white;
         text-transform: uppercase;
         font-weight: 600;
-        background-color: $celeste-claro-azulado;
+        background-color: rgb(70, 130, 180);
         border-radius: 5px;
         border: none;
       }
@@ -151,7 +154,7 @@ $margen-elementos-navbar: 8%;
     > div > a {
       display: flex;
       align-items: center;
-      font-size: $tamaño-fuente-navbar;
+      font-size: 18px;
       font-weight: 500;
       border-bottom: 1px solid transparent;
       transition: all 0.7s ease;
@@ -379,7 +382,7 @@ $margen-elementos-navbar: 8%;
   .barraNavegacionTop {
     height: $altura-top-navbar-laptop;
     // position: relative;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(15px);
     background-color: rgba(255, 255, 255, 0.788);
     .contenidoBarra {
       width: 100%;
@@ -407,6 +410,7 @@ $margen-elementos-navbar: 8%;
         padding: 10px 15px 17px 15px;
         a {
           font-weight: 600;
+          transition: all 0.3s ease;
         }
       }
       > div:hover {

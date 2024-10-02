@@ -118,7 +118,7 @@ const Navbar = () => {
           </div>
           <div className={s.elementosNavegacion}>
             <div className={s.proyectos}>
-              <Link href="">
+              <Link href="/proyectos">
                 Proyectos{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +223,9 @@ const Navbar = () => {
                     <Link href={""}>Equipo {arrowRight}</Link>
                   </li>
                   <li>
-                    <Link href={""}>Linea de tiempo {arrowRight} </Link>
+                    <Link href={"/linea-de-tiempo"}>
+                      Linea de tiempo {arrowRight}{" "}
+                    </Link>
                   </li>
                   <li>
                     <Link href={""}>Contacto {arrowRight}</Link>
