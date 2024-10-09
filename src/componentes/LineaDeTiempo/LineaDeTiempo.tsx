@@ -1,6 +1,6 @@
 import React from "react";
 import hero from "@/assets/hero_linea_de_tiempo1.webp";
-import s from "./Lineadetiempo.module.scss";
+import s from "./Linea.module.scss";
 import HeaderSubPaginas from "@/commons/HeaderSubPaginas/HeaderSubPaginas";
 
 const LineaDeTiempo = () => {
@@ -24,22 +24,23 @@ const LineaDeTiempo = () => {
     <div className={s.outerContainer}>
       <div className={s.contentContainer}>
         <div className={s.content}>
-          <HeaderSubPaginas title="Linea de timpo" img={hero} />
+          <HeaderSubPaginas title="Linea de tiempo" img={hero} />
           <div className={s.historia}>
             <h2>Nuestra historia</h2>
             <p>
               Desde su fundación, nuestra ONG ha trabajado incansablemente para
               promover la sostenibilidad y el bienestar de las comunidades.
               Nacimos de la visión de un grupo de apasionados por el medio
-              ambiente que creían en un futuro mejor.{" "}
+              ambiente que creían en un futuro mejor. A lo largo de los años,
+              hemos implementado numerosos proyectos enfocados en la educación
+              ambiental, la conservación de recursos y la recuperación de
+              ecosistemas.
               <span>
-                A lo largo de los años, hemos implementado numerosos proyectos
-                enfocados en la educación ambiental, la conservación de recursos
-                y la recuperación de ecosistemas. Cada hito en nuestro camino
-                refleja nuestro compromiso y dedicación hacia un planeta más
-                saludable, y hoy, te invitamos a recorrer nuestra historia a
-                través de esta línea de tiempo, que resalta los momentos más
-                significativos de nuestra trayectoria.
+                {" "}
+                Cada hito en nuestro camino refleja nuestro compromiso y
+                dedicación hacia un planeta más saludable, y hoy, te invitamos a
+                recorrer nuestra historia a través de esta línea de tiempo, que
+                resalta los momentos más significativos de nuestra trayectoria.
               </span>
             </p>
           </div>

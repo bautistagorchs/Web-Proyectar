@@ -512,12 +512,12 @@ $margen-elementos-navbar: 8%;
       // border: 1px solid orange;
       ul {
         height: 70%;
-        margin-top: 5%;
+        margin-top: 8px;
         list-style: none;
-        line-height: 1.9rem;
+        line-height: 3rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        // justify-content: space-between;
         // border: 1px solid orange;
       }
       hr {

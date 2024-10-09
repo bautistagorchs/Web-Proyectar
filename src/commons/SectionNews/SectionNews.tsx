@@ -220,9 +220,7 @@ const SectionNews = () => {
               </button>
             </div>
           </div>
-          <button className={s.todasLasNovedades}>
-            Ver todas las novedades
-          </button>
+          <button className={s.todasLasNovedades}>10 años de noticias</button>
         </div>
       </div>
     </section>

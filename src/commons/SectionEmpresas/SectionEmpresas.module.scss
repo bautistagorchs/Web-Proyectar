@@ -1,7 +1,7 @@
 section.empresas {
   padding-bottom: 15vh;
-  background-color: white;
-  background-color: rgb(223, 223, 223);
+  // background-color: white;
+  background-color: #bbbbbb;
   .contenedorEmpresas {
     // height: 100%;
     width: 100%;
@@ -62,8 +62,8 @@ section.empresas {
 
 @media (min-width: 900px) {
   section.empresas .contenedorEmpresas .contenidoEmpresas {
-    $width-divs: 250px;
-    $height-divs: 100px;
+    $width-divs: 220px;
+    $height-divs: 85px;
     $cant-divs: 7;
     $segundos-animacion: 20s;
 

@@ -1,5 +1,5 @@
 import Navbar from "@/componentes/navbar/Navbar";
-import { open_sans } from "@/fonts/fonts";
+import { muli } from "@/fonts/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/componentes/footer/Footer";
@@ -23,7 +23,7 @@ export default function RootLayout({
           sizes="any"
         />
       </head>
-      <body className={open_sans.className}>
+      <body className={muli.className}>
         <Navbar />
         {children}
         <Footer />

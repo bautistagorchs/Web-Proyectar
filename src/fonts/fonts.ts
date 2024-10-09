@@ -1,4 +1,4 @@
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Mulish } from "next/font/google";
 
 // export const source_code_pro = Source_Code_Pro({
 //   subsets: ["latin"],
@@ -24,3 +24,8 @@ export const open_sans = Open_Sans({
 //   subsets: ["latin"],
 //   weight: ["300", "400", "500", "600", "700"],
 // });
+
+export const muli = Mulish({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});

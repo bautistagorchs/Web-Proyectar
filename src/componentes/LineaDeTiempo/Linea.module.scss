@@ -24,17 +24,20 @@
 }
 
 .historia {
+  max-width: 900px;
   margin-top: 2rem;
 
   h2 {
     text-align: center;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 28px;
     letter-spacing: 1px;
   }
   p {
+    display: none;
     margin-top: 15px;
     font-weight: 200;
+    font-size: 17px;
 
     text-align: center;
     span {
@@ -99,12 +102,13 @@ $background_color: rgba(255, 255, 255, 0.377);
   }
 }
 
+$circle-size: 25px;
 .circle {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: $circle-size;
+  height: $circle-size;
   border-radius: 50%;
-  right: -15px;
+  right: calc($circle-size / -2);
   top: 32px;
   z-index: 10;
   background-color: white;
@@ -165,7 +169,7 @@ $background_color: rgba(255, 255, 255, 0.377);
     left: 0;
   }
   .circle {
-    left: 10px !important;
+    left: calc($circle-size / 2) !important;
   }
 
   .container:nth-child(odd) {

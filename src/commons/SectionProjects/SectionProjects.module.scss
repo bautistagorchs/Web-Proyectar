@@ -188,7 +188,7 @@ section.proyectos {
 
 @media (min-width: 900px) {
   section.proyectos {
-    padding-top: 15vh;
+    padding-top: 7vh;
     .contenidoProyectos .headerContainer {
       h5 {
         margin-top: 0;
@@ -208,7 +208,7 @@ section.proyectos {
       width: 90%;
       padding-top: 5vh;
       display: flex;
-      gap: 10rem;
+      gap: 7rem;
     }
     .contenidoProyectos .card {
       width: 90%;
@@ -225,7 +225,8 @@ section.proyectos {
         max-height: unset;
         flex-direction: column;
         .contenedorImagen {
-          border-radius: 25px;
+          border-radius: 8px;
+          border: 1px solid black;
           overflow: hidden;
           h3 {
             display: none;
@@ -262,7 +263,8 @@ section.proyectos {
             color: $main-color;
             opacity: unset;
             text-align: justify;
-            line-height: 30px;
+            font-size: 19px !important;
+            line-height: 40px;
             span {
               font-weight: 700;
             }

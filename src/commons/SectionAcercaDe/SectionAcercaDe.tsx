@@ -32,12 +32,11 @@ const SectionAcercaDe = () => {
       <div className={s.contenedorContenido}>
         <div className={s.contenidoAcercaDe} ref={contenidoRef}>
           <div className={s.central}>
-            <h1>Nuestro propósito</h1>
+            <h1>Nuestro Propósito</h1>
             <p>
-              Desarrollamos e implementamos <span> proyectos innovadores</span>{" "}
-              que reestablezcan el equilibrio de <span> ecosistemas </span>
-              amenazados y <span> comunidades </span>
-              de bajos recursos.
+              Desarrollamos e implementamos proyectos innovadores que
+              reestablezcan el equilibrio de ecosistemas amenazados y
+              comunidades de bajos recursos.
             </p>
             <button>Nuestras propuestas</button>
             <Link href={"#impactoEnNumeros"}>

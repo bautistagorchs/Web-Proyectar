@@ -9,17 +9,11 @@ const Footer = () => {
       <div className={s.contenido}>
         <div className={s.divFooter}>
           <div className={s.agradecimientos}>
-            <h3>Gracias por acompañarnos en esta mision</h3>
-            <div>
-              <p>
-                ¿Te gusta lo que hacemos? Te invitamos a compartirla con tus
-                amigos/as y multiplicar el impacto
-              </p>
-              <p>
-                Nos encantaria recibir tus comentarios, podes sumarte a las
-                redes sociales y unirte a nuestra comunidad
-              </p>
-            </div>
+            <h3>
+              "Las manos que ayudan son mas nobles que los labios que rezan"
+            </h3>
+            <p>Madre Teresa de Calcuta</p>
+            <div></div>
           </div>
           <div className={s.contactoContainer}>
             <div className={s.contacto}>
@@ -38,7 +32,7 @@ const Footer = () => {
                 >
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>{" "}
-                +54 9 11 5474-8745
+                +54 9 11 3770 - 6653
               </Link>
               <Link href={""}>
                 <svg
@@ -79,23 +73,6 @@ const Footer = () => {
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                 </Link>
-                <Link href={""}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-twitter"
-                  >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                  </svg>
-                </Link>
-
                 <Link href={""}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -23,7 +23,7 @@ section.acercaDe {
   }
 
   .custom_shape_divider_bottom_1726338031 .shape_fill {
-    fill: #095256;
+    fill: #008080;
   }
   .contenedorContenido {
     display: flex;
@@ -93,7 +93,7 @@ section.acercaDe {
     .contenidoAcercaDe {
       width: 100%;
       min-width: 500px;
-      margin-top: 13vh;
+      margin-top: 8vh;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -122,9 +122,10 @@ section.acercaDe {
         }
         p {
           width: 60%;
-          line-height: 2.5rem;
+          // max-width: 1000px;
+          line-height: 3.5rem;
           color: $main-color;
-          font-size: 25px;
+          font-size: 29px;
           text-align: center;
         }
         button {

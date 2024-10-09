@@ -23,7 +23,7 @@
   }
   h1 {
     position: absolute;
-    bottom: calc(100% - 90%);
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
     color: rgb(255, 255, 255);
@@ -39,6 +39,6 @@
 
 @media (min-width: 900px) {
   .imageContainer {
-    height: 60vh;
+    height: 50vh;
   }
 }
