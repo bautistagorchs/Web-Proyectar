@@ -120,7 +120,7 @@ const Navbar = () => {
           </div>
           <div className={s.elementosNavegacion}>
             <div className={s.proyectos}>
-              <Link href="/proyectos">
+              <Link href="/centro-comunitario-resiliente">
                 Proyectos{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
