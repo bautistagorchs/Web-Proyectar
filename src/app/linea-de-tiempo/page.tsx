@@ -1,4 +1,4 @@
-import LineaDeTiempo from "@/componentes/LineaDeTiempo/LineaDeTiempo";
+import LineaDeTiempo from "@/componentes/lineaDeTiempo/LineaDeTiempo";
 import React from "react";
 
 export default function page() {

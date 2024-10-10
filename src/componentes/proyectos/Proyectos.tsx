@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./proyectos.module.scss";
 import Image from "next/image";
-import hero from "@/assets/hero_proyectos.jpg";
+import hero from "@/assets/foto_ccr_blended_frente.jpg";
 import Link from "next/link";
 const Proyectos = () => {
   return (
@@ -140,51 +140,54 @@ const Proyectos = () => {
               muchas veces proyectos de conservacion, agroecologia y
               urbanizaciones.
             </p>
-            <div className={s.list}>
-              <div className={s.title}>
-                <h3>01.</h3>
-                <span>
-                  Mitigan el <br />
-                  Cambio Climático
-                </span>
+            <div>
+              <div className={s.list}>
+                <div className={s.title}>
+                  <h3>01.</h3>
+                  <span>
+                    Mitigan el <br />
+                    Cambio Climático
+                  </span>
+                </div>
+                <p>
+                  En sus etapa de crecimiento capturan y almacenan CO2 del aire.
+                </p>
               </div>
-              <p>
-                En sus etapa de crecimiento capturan y almacenan CO2 del aire.
-              </p>
-            </div>
-            <div className={s.list}>
-              <div className={s.title}>
-                <h3>02.</h3>
-                <span>
-                  Refrescan <br />
-                  las ciudades
-                </span>
+              <div className={s.list}>
+                <div className={s.title}>
+                  <h3>02.</h3>
+                  <span>
+                    Refrescan <br />
+                    las ciudades
+                  </span>
+                </div>
+                <p>
+                  Son el eje de la resiliencia de las ciudades frente a la
+                  crisis
+                </p>
               </div>
-              <p>
-                Son el eje de la resiliencia de las ciudades frente a la crisis
-              </p>
-            </div>
-            <div className={s.list}>
-              <div className={s.title}>
-                <h3>03.</h3>
-                <span>
-                  Albergan <br />
-                  vida
-                </span>
+              <div className={s.list}>
+                <div className={s.title}>
+                  <h3>03.</h3>
+                  <span>
+                    Albergan <br />
+                    vida
+                  </span>
+                </div>
+                <p>
+                  Cada arbol alberga desde microorganismos hasta insectos y aves
+                </p>
               </div>
-              <p>
-                Cada arbol alberga desde microorganismos hasta insectos y aves
-              </p>
-            </div>
-            <div className={s.list}>
-              <div className={s.title}>
-                <h3>04.</h3>
-                <span>
-                  Mejoran <br />
-                  la calidad de vida
-                </span>
+              <div className={s.list}>
+                <div className={s.title}>
+                  <h3>04.</h3>
+                  <span>
+                    Mejoran <br />
+                    la calidad de vida
+                  </span>
+                </div>
+                <p>Embellecen las ciudades, reducen los ruidos y capturan</p>
               </div>
-              <p>Embellecen las ciudades, reducen los ruidos y capturan</p>
             </div>
             <Link href={""}>
               <button>CONSULTAR SOBRE ESTE VOLUNTARIADO </button>

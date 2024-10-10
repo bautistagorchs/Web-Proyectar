@@ -7,7 +7,7 @@ import SectionAcercaDe from "@/commons/SectionAcercaDe/SectionAcercaDe";
 import SectionEmpresas from "@/commons/SectionEmpresas/SectionEmpresas";
 // import img from "@/assets/edu_con_ale_foto_frente_comedor_garrote.jpeg";
 // import Image from "next/image";
-import s from "./Landing.module.scss";
+import s from "./landing.module.scss";
 import SectionMap from "@/commons/SectionMap/SectionMap";
 import SectionCounter from "@/commons/SectionCounter/SectionCounter";
 

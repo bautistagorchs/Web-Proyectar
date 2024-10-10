@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import pet from "@/assets/shutterstock_PET.jpg";
-import s from "./Navbar.module.scss";
+import s from "./navbar.module.scss";
 
 const Navbar = () => {
   const initialState = {

@@ -1,6 +1,6 @@
 import React from "react";
 // import s from "@/commons/SectionAcercaDe/SectionAcercaDe.module.scss";
-import s from "./Footer.module.scss";
+import s from "./footer.module.scss";
 import Link from "next/link";
 
 const Footer = () => {

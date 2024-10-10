@@ -1,3 +1,10 @@
+$overlay: rgba(96, 170, 12, 0.9);
+$overlay: rgba(0, 0, 0, 0.836);
+$main-color: #ff6178;
+$main-color: #ad5462;
+$secondary-color: #1dbcae;
+$secondary-color: #237a73;
+
 .outerContainer {
   width: 100%;
   display: flex;
@@ -24,7 +31,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(96, 170, 12, 0.9);
+    background-color: $overlay;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +60,7 @@
   h5 {
     font-size: 16px;
     font-weight: 400;
-    color: #ff6178;
+    color: $main-color;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
@@ -105,7 +112,7 @@
     align-items: center;
     gap: 0.5rem;
     svg {
-      color: #ff6178;
+      color: $main-color;
     }
     h6 {
       text-transform: uppercase;
@@ -125,10 +132,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  > div {
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
   h5 {
     font-size: 16px;
     font-weight: 400;
-    color: #1dbcae;
+    color: $secondary-color;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
@@ -141,6 +157,7 @@
     margin-bottom: 30px;
   }
   p {
+    max-width: 700px;
     line-height: 20px;
     font-weight: 200;
     color: #313131;
@@ -149,13 +166,13 @@
     margin-bottom: 5px;
   }
 
-  > div.list {
-    width: 90%;
-    margin-top: 50px;
+  div.list {
+    width: 100%;
+    max-width: 800px;
     .title {
       display: flex;
       align-items: center;
-      color: #1dbcae;
+      color: $secondary-color;
       margin-bottom: 15px;
       h3 {
         font-size: 35px;
@@ -179,7 +196,7 @@
     font-size: 14px;
     font-weight: 600;
     color: #fff;
-    background: #ff6178;
+    background: $main-color;
     border: none;
     border-radius: 6px;
   }
@@ -282,6 +299,25 @@ section.others {
       }
     }
   }
+  .impacto {
+    h5 {
+      font-size: 18px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 18px;
+    }
+    div.list {
+      max-width: 350px;
+      .title {
+        h3 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1300px) {
@@ -307,6 +343,11 @@ section.others {
       p {
         font-size: 19px;
       }
+    }
+  }
+  section.impacto {
+    div.list {
+      max-width: 250px;
     }
   }
 }
