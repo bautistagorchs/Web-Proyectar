@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./HeaderSubPaginas.module.scss";
+import s from "./headerSubPaginas.module.scss";
 import Image from "next/image";
 import { HeaderSubPaginasProps } from "@/types/types";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import hero from "@/assets/hero_linea_de_tiempo1.webp";
 import s from "./linea.module.scss";
-import HeaderSubPaginas from "@/commons/HeaderSubPaginas/HeaderSubPaginas";
+import HeaderSubPaginas from "@/commons/headerSubPaginas/HeaderSubPaginas";
 
 const LineaDeTiempo = () => {
   // const arrowRight = (

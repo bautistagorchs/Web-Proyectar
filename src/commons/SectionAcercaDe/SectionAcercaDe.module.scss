@@ -55,8 +55,6 @@ section.acercaDe {
       text-align: center;
       span {
         letter-spacing: 0.2px;
-        // font-weight: 700;
-        // text-decoration: underline;
       }
     }
     button {
@@ -76,7 +74,6 @@ section.acercaDe {
     }
     a > svg {
       margin-top: 5vh;
-      // padding-bottom: 10vh;
     }
   }
 }
@@ -103,9 +100,6 @@ section.acercaDe {
 
       transition: opacity 0.8s ease, transform 0.8s ease;
 
-      // animation: opacity linear;
-      // animation-timeline: view();
-      // animation-range: entry 0% cover 40%;
       &.isVisible {
         opacity: 1;
         transform: scale(1);

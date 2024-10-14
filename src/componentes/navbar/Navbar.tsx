@@ -30,7 +30,6 @@ const Navbar = () => {
   useEffect(() => {
     if (window !== undefined) {
       setInnerWidth(window.innerWidth);
-      console.log(window.outerHeight);
     }
     let scroll = window.scrollY;
     setScrollY(scroll);

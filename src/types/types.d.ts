@@ -21,3 +21,8 @@ export interface HeaderSubPaginasProps {
   title: string;
   img: StaticImageData;
 }
+
+export interface ImageItem {
+  id: number;
+  imgSrc: StaticImageData; // Tipado para imágenes importadas como módulos
+}
